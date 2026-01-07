@@ -1,0 +1,62 @@
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.deps.json
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.dll
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ref\ConfigurationFramework.dll
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.pdb
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.dll
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.pdb
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csprojAssemblyReference.cache
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.AssemblyInfoInputs.cache
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.AssemblyInfo.cs
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csproj.CoreCompileInputs.cache
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csproj.CopyComplete
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ConfigurationFramework.dll
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ref\ConfigurationFramework.dll
+D:\Gmch\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ConfigurationFramework.pdb
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csprojAssemblyReference.cache
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.AssemblyInfoInputs.cache
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.AssemblyInfo.cs
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csproj.CoreCompileInputs.cache
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ConfigurationFramework.dll
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ref\ConfigurationFramework.dll
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ConfigurationFramework.pdb
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.deps.json
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.dll
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ref\ConfigurationFramework.dll
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.pdb
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.dll
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.pdb
+D:\Gmch\Backend\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csproj.CopyComplete
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.StaticWebAssets.xml
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.deps.json
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csproj.AssemblyReference.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.GeneratedMSBuildEditorConfig.editorconfig
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.AssemblyInfoInputs.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.AssemblyInfo.cs
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csproj.CoreCompileInputs.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csproj.CopyComplete
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ConfigurationFramework.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\refint\ConfigurationFramework.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ConfigurationFramework.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ref\ConfigurationFramework.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.StaticWebAssets.xml
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.deps.json
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationFramework.pdb
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\bin\Debug\net5.0\ConfigurationDtos.pdb
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csproj.AssemblyReference.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.AssemblyInfoInputs.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.AssemblyInfo.cs
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPatientImagesFramework.csproj.CoreCompileInputs.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\GMCHPati.805DCB83.Up2Date
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ConfigurationFramework.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\refint\ConfigurationFramework.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ConfigurationFramework.pdb
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesFramework\GMCHPatientImagesFramework\obj\Debug\net5.0\ref\ConfigurationFramework.dll

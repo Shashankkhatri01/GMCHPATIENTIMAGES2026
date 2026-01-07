@@ -1,0 +1,16 @@
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\bin\Debug\net5.0\FinanceDtos.deps.json
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\bin\Debug\net5.0\FinanceDtos.dll
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\bin\Debug\net5.0\ref\FinanceDtos.dll
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\bin\Debug\net5.0\FinanceDtos.pdb
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\FinanceDtos.GeneratedMSBuildEditorConfig.editorconfig
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\FinanceDtos.AssemblyInfoInputs.cache
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\FinanceDtos.AssemblyInfo.cs
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\FinanceDtos.csproj.CoreCompileInputs.cache
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\FinanceDtos.dll
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\ref\FinanceDtos.dll
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\FinanceDtos.pdb
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\FinanceDtos.csprojAssemblyReference.cache
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\staticwebassets\FinanceDtos.StaticWebAssets.Manifest.cache
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\staticwebassets\FinanceDtos.StaticWebAssets.xml
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\scopedcss\bundle\FinanceDtos.styles.css
+D:\FinanceApi\FinanceAPI\FinanceDtos\FinanceDtos\obj\Debug\net5.0\FinanceDtos.RazorTargetAssemblyInfo.cache

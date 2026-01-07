@@ -1,0 +1,30 @@
+{
+  "AppSettings": {
+    "Secret": "E4LLI5JUy5qC0t4tPFPxYN5ycem6IQcEoWYUh7kskIizvfJY+YWAwYhGTJaNcdAhF6/+LX9XXuzIJpKIN4Eyyg==",
+    "RefreshTokenTTL": 2,
+    "EmailFrom": "kinalkukda123@gmail.com",
+    "SmtpHost": "smtp.gmail.com",
+    "SmtpPort": 587,
+    "SmtpUser": "noreply@gmail.com",
+    "SmtpPass": "tnybcypekvishstr",
+    //"SmtpPass": "tvmrnbofwxmjoymg",
+    "JwtTokenDuration": "360", // Minutes
+    "RefreshTokenDuration": "7" // Days
+    // "URL": "http://localhost:50898/"
+  },
+  "ConnectionStrings": {
+    "SqlServerConnection": "Server=103.155.84.143;Database=GMCHPatientImages;User ID=GMCH;Password=Votive@2023;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "ContentURL": {
+    "ImageURL": "http://49.50.66.126:8715/"
+  },
+  "AllowedHosts": "*",
+  
+}

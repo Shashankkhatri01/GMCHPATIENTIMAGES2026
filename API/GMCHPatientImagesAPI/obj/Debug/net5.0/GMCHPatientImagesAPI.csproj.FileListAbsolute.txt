@@ -1,0 +1,319 @@
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csprojAssemblyReference.cache
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.AssemblyInfoInputs.cache
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.AssemblyInfo.cs
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csproj.CoreCompileInputs.cache
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.MvcApplicationPartsAssemblyInfo.cs
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.MvcApplicationPartsAssemblyInfo.cache
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.dll
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\ref\Configuration.dll
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.pdb
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\appsettings.Development.json
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\appsettings.json
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\report.20230620.160754.31084.0.001.json
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.exe
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\libwkhtmltox.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.deps.json
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.runtimeconfig.json
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.runtimeconfig.dev.json
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ref\Configuration.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.pdb
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ClosedXML.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\DinkToPdf.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ExcelNumberFormat.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\MimeKit.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OOXML.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OpenXml4Net.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OpenXmlFormats.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Client.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Common.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Interfaces.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Text.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ICSharpCode.SharpZipLib.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Data.SqlClient.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Drawing.Common.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.IO.Packaging.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Private.ServiceModel.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.ServiceModel.Primitives.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\System.ServiceModel.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationFramework.dll
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.pdb
+D:\Gmch\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationFramework.pdb
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\Configuration.StaticWebAssets.Manifest.cache
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\Configuration.StaticWebAssets.xml
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\scopedcss\bundle\Configuration.styles.css
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.RazorTargetAssemblyInfo.cache
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csproj.CopyComplete
+D:\Gmch\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.genruntimeconfig.cache
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csprojAssemblyReference.cache
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.AssemblyInfoInputs.cache
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.AssemblyInfo.cs
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csproj.CoreCompileInputs.cache
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.MvcApplicationPartsAssemblyInfo.cs
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.MvcApplicationPartsAssemblyInfo.cache
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\ref\Configuration.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.pdb
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\appsettings.Development.json
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\report.20230620.160754.31084.0.001.json
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\appsettings.json
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.exe
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\libwkhtmltox.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.deps.json
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.runtimeconfig.json
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.runtimeconfig.dev.json
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ref\Configuration.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.pdb
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ClosedXML.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\DinkToPdf.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ExcelNumberFormat.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\MimeKit.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OOXML.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OpenXml4Net.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OpenXmlFormats.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Client.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Common.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Interfaces.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Text.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ICSharpCode.SharpZipLib.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Data.SqlClient.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Drawing.Common.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.IO.Packaging.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Private.ServiceModel.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.ServiceModel.Primitives.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\System.ServiceModel.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationFramework.dll
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.pdb
+D:\Gmch\Backend\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationFramework.pdb
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\Configuration.StaticWebAssets.Manifest.cache
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\Configuration.StaticWebAssets.xml
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\scopedcss\bundle\Configuration.styles.css
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.RazorTargetAssemblyInfo.cache
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csproj.CopyComplete
+D:\Gmch\Backend\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.genruntimeconfig.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\appsettings.Development.json
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\appsettings.json
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.StaticWebAssets.xml
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\report.20230620.160754.31084.0.001.json
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.StaticWebAssets.xml
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.exe
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\libwkhtmltox.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.deps.json
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.runtimeconfig.json
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.runtimeconfig.dev.json
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ClosedXML.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\DinkToPdf.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ExcelNumberFormat.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\MimeKit.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OOXML.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OpenXml4Net.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OpenXmlFormats.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Client.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Common.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Interfaces.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Text.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ICSharpCode.SharpZipLib.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Data.SqlClient.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Drawing.Common.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.IO.Packaging.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Private.ServiceModel.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.ServiceModel.Primitives.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.ServiceModel.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationFramework.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationFramework.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csproj.AssemblyReference.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.AssemblyInfoInputs.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.AssemblyInfo.cs
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csproj.CoreCompileInputs.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.MvcApplicationPartsAssemblyInfo.cs
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.MvcApplicationPartsAssemblyInfo.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\scopedcss\bundle\Configuration.styles.css
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\Configuration.StaticWebAssets.Manifest.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.RazorTargetAssemblyInfo.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csproj.CopyComplete
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\refint\Configuration.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.genruntimeconfig.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\ref\Configuration.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.StaticWebAssets.xml
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\appsettings.Development.json
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\report.20230620.160754.31084.0.001.json
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.StaticWebAssets.xml
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\appsettings.json
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.exe
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\libwkhtmltox.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.deps.json
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.runtimeconfig.json
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.runtimeconfig.dev.json
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Configuration.pdb
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ClosedXML.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\DinkToPdf.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ExcelNumberFormat.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\MimeKit.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OOXML.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OpenXml4Net.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.OpenXmlFormats.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\NPOI.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Client.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Common.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Interfaces.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ServiceStack.Text.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ICSharpCode.SharpZipLib.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Drawing.Common.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.IO.Packaging.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Private.ServiceModel.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.ServiceModel.Primitives.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\System.ServiceModel.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationFramework.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationDtos.pdb
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\bin\Debug\net5.0\ConfigurationFramework.pdb
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csproj.AssemblyReference.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.AssemblyInfoInputs.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.AssemblyInfo.cs
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.csproj.CoreCompileInputs.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.MvcApplicationPartsAssemblyInfo.cs
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.MvcApplicationPartsAssemblyInfo.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.RazorTargetAssemblyInfo.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\scopedcss\bundle\Configuration.styles.css
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\Configuration.StaticWebAssets.Manifest.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\Configuration.StaticWebAssets.Pack.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\msbuild.Configuration.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\msbuild.build.Configuration.props
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.Configuration.props
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.Configuration.props
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPati.1B2A6389.Up2Date
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\refint\Configuration.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\Configuration.pdb
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\GMCHPatientImagesAPI.genruntimeconfig.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesAPI\obj\Debug\net5.0\ref\Configuration.dll

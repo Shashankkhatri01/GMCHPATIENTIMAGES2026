@@ -1,0 +1,16 @@
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\bin\Release\net5.0\IdexVendorManegementDtos.deps.json
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\bin\Release\net5.0\IdexVendorManegementDtos.dll
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\bin\Release\net5.0\ref\IdexVendorManegementDtos.dll
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\bin\Release\net5.0\IdexVendorManegementDtos.pdb
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\IdexVendorManegementDtos.csprojAssemblyReference.cache
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\IdexVendorManegementDtos.GeneratedMSBuildEditorConfig.editorconfig
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\IdexVendorManegementDtos.AssemblyInfoInputs.cache
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\IdexVendorManegementDtos.AssemblyInfo.cs
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\IdexVendorManegementDtos.csproj.CoreCompileInputs.cache
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\staticwebassets\IdexVendorManegementDtos.StaticWebAssets.Manifest.cache
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\staticwebassets\IdexVendorManegementDtos.StaticWebAssets.xml
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\scopedcss\bundle\IdexVendorManegementDtos.styles.css
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\IdexVendorManegementDtos.RazorTargetAssemblyInfo.cache
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\IdexVendorManegementDtos.dll
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\ref\IdexVendorManegementDtos.dll
+D:\IdexVendorManagement\API\IdexVendorManagementDtos\IdexVendorManagementDtos\obj\Release\net5.0\IdexVendorManegementDtos.pdb

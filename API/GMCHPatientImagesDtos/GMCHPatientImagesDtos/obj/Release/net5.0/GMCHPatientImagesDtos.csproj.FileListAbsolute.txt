@@ -1,0 +1,52 @@
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.deps.json
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.dll
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ref\ConfigurationDtos.dll
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.pdb
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.csprojAssemblyReference.cache
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.AssemblyInfoInputs.cache
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.AssemblyInfo.cs
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.csproj.CoreCompileInputs.cache
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\staticwebassets\ConfigurationDtos.StaticWebAssets.Manifest.cache
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\staticwebassets\ConfigurationDtos.StaticWebAssets.xml
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\scopedcss\bundle\ConfigurationDtos.styles.css
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.RazorTargetAssemblyInfo.cache
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\ConfigurationDtos.dll
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\ref\ConfigurationDtos.dll
+D:\Gmch\Backend\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\ConfigurationDtos.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.StaticWebAssets.xml
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.deps.json
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.csproj.AssemblyReference.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.GeneratedMSBuildEditorConfig.editorconfig
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.AssemblyInfoInputs.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.AssemblyInfo.cs
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.csproj.CoreCompileInputs.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\scopedcss\bundle\ConfigurationDtos.styles.css
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\staticwebassets\ConfigurationDtos.StaticWebAssets.Manifest.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.RazorTargetAssemblyInfo.cache
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\ConfigurationDtos.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\refint\ConfigurationDtos.dll
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\ConfigurationDtos.pdb
+D:\Server Backup SVN 21122023\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\ref\ConfigurationDtos.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.StaticWebAssets.xml
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.deps.json
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\bin\Release\net5.0\ConfigurationDtos.pdb
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.AssemblyInfoInputs.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.AssemblyInfo.cs
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.csproj.CoreCompileInputs.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\GMCHPatientImagesDtos.RazorTargetAssemblyInfo.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\scopedcss\bundle\ConfigurationDtos.styles.css
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\staticwebassets\ConfigurationDtos.StaticWebAssets.Manifest.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\staticwebassets\ConfigurationDtos.StaticWebAssets.Pack.cache
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\staticwebassets\msbuild.ConfigurationDtos.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\staticwebassets\msbuild.build.ConfigurationDtos.props
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\staticwebassets\msbuild.buildMultiTargeting.ConfigurationDtos.props
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\staticwebassets\msbuild.buildTransitive.ConfigurationDtos.props
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\ConfigurationDtos.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\refint\ConfigurationDtos.dll
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\ConfigurationDtos.pdb
+C:\Applications\GMCHPATIENT\API\GMCHPatientImagesDtos\GMCHPatientImagesDtos\obj\Release\net5.0\ref\ConfigurationDtos.dll

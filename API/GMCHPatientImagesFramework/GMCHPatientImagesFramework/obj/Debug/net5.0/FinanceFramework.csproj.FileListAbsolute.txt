@@ -1,0 +1,15 @@
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\bin\Debug\net5.0\FinanceFramework.deps.json
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\bin\Debug\net5.0\FinanceFramework.dll
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\bin\Debug\net5.0\ref\FinanceFramework.dll
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\bin\Debug\net5.0\FinanceFramework.pdb
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\obj\Debug\net5.0\FinanceFramework.GeneratedMSBuildEditorConfig.editorconfig
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\obj\Debug\net5.0\FinanceFramework.AssemblyInfoInputs.cache
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\obj\Debug\net5.0\FinanceFramework.AssemblyInfo.cs
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\obj\Debug\net5.0\FinanceFramework.csproj.CoreCompileInputs.cache
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\obj\Debug\net5.0\FinanceFramework.dll
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\obj\Debug\net5.0\ref\FinanceFramework.dll
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\obj\Debug\net5.0\FinanceFramework.pdb
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\obj\Debug\net5.0\FinanceFramework.csprojAssemblyReference.cache
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\bin\Debug\net5.0\FinanceDtos.dll
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\bin\Debug\net5.0\FinanceDtos.pdb
+D:\FinanceApi\FinanceAPI\FinanceFramework\FinanceFramework\obj\Debug\net5.0\FinanceFramework.csproj.CopyComplete
