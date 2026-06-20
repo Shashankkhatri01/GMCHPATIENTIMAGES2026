@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConfigurationDtos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64ce7532e781382e2ffebc3d3341f0f8eb4d1a08")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConfigurationDtos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConfigurationDtos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\API",
+    "\\API\\GMCHPatientImagesAPI",
+    "\\API\\GMCHPatientImagesAPI\\Controllers"
+  ],
+  "SelectedNode": "\\API\\GMCHPatientImagesAPI\\Controllers\\PatientImagesController.cs",
+  "PreviewInSolutionExplorer": false
+}
