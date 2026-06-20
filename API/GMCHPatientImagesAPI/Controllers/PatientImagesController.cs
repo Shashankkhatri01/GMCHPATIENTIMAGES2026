@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace GMCHPatientImages.Controllers
 {
+    //Test
     [Route("api/PatientImages")]
     [ApiController]
     public class PatientImagesController : BaseController
