@@ -1,4 +1,4 @@
-using GMCHPatientImagesDtos.DTOs;
+using ConfigurationDtos.DTOs;
 
 namespace GMCHPatientImagesFramework.Repositories.Interfaces
 {

@@ -1,12 +1,8 @@
-
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using GMCHPatientImagesFramework.Repositories.Interfaces;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
 using System.Data;
+using System.Threading.Tasks;
 
 namespace GMCHPatientImagesFramework.Repositories
 {
@@ -56,8 +52,6 @@ namespace GMCHPatientImagesFramework.Repositories
             return response;
         }
 
-        
-
         public async Task<KResponseParam> GetByIdAsync(long id)
         {
             var response = await GetDataFromStoredProcedureAsync<SeachByIdDTO, KResponseParam>(ProcedureName, new SeachByIdDTO { Id = id, Mode= "searchbyId" });
@@ -76,7 +70,17 @@ namespace GMCHPatientImagesFramework.Repositories
             var response = await ExecuteStoredProcedureReturnAsync<TRequestParam>(ProcedureName, requestParam );
             return response;
         }
+        public async Task<long> InsertBulkAsync(TRequestParam requestParam, DataTable dt, string tvpParameterName, string tvpTypeName)
+        {
+            var response = await ExecuteStoredProcedureBulkReturnAsync(
+                    ProcedureName,
+                    requestParam,
+                    dt,
+                    tvpParameterName,
+                    tvpTypeName);
 
+            return response;
+        }
         public async Task<long> SetStatusAsync(TRequestParam requestParam)
         {
             var response = await ExecuteStoredProcedureReturnAsync<TRequestParam>(ProcedureName, requestParam);
@@ -95,5 +99,7 @@ namespace GMCHPatientImagesFramework.Repositories
             var response = await ExecuteStoredProcedureReturnAsync<TReq>(ProcedureName, requestParam);
             return response;
         }
+
+        
     }
 }

@@ -1,146 +1,61 @@
-using GMCHPatientImagesDtos.DTOs;
+using ConfigurationDtos.DTOs;
 using GMCHPatientImagesFramework.Services.Interfaces;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace GMCHPatientImages.Controllers
 {
-    //Test
     [Route("api/PatientImages")]
     [ApiController]
     public class PatientImagesController : BaseController
     {
-        private IPatientImagesService _Service;
+        private IPatientImagesService _service;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private IConfiguration _configuration;
 
-        public PatientImagesController(IPatientImagesService Service, IWebHostEnvironment hostEnvironment, IConfiguration configuration)
+        public PatientImagesController(IPatientImagesService service, IWebHostEnvironment hostEnvironment, IConfiguration configuration)
         {
-            _Service = Service;
+            _service = service;
             _webHostEnvironment = hostEnvironment;
             _configuration = configuration;
         }
 
-        //Get All Dropdowns
-        [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] PatientImagesDTO patientImagesDTO)
+        //Get All
+        [HttpPost]
+        [Route("getall")]
+        public async Task<IActionResult> Get([FromBody] PatientImagesDTO patientImagesDTO)
         {
             patientImagesDTO.UserIdC = currentUser.LoginId;
-            patientImagesDTO.Mode = "search";
-            var response = await _Service.GetAll(patientImagesDTO);
-            //for (int i=0; i<response.ReturnValue.Count;i++)
-            //{
-            //  string imageBase64Data =Convert.ToBase64String(response.ReturnValue[i].Image1);
-            //  response.ReturnValue[i].Image =string.Format("data:image/jpg;base64,{0}",imageBase64Data);
-            //}
+            patientImagesDTO.Mode = patientImagesDTO.Mode ?? "search"; //searchautosuggest
+            var response = await _service.GetAllAsync(patientImagesDTO);
             return Ok(response);
         }
-
-        //Get By Id
-        [HttpGet]
-        [Route("GetById")]
-        public async Task<IActionResult> GetById([FromQuery] PatientImagesDTO patientImagesDTO)
-        {
-            patientImagesDTO.UserIdC = currentUser.LoginId;
-            patientImagesDTO.Mode = "searchbyid";
-            var response = await _Service.GetAll(patientImagesDTO);
-            //for (int i = 0; i < response.ReturnValue.Count; i++)
-            //{
-            if (response != null && response.ReturnValue.Count > 0 && response.ReturnValue != null)
-            {
-                string imageBase64Data = Convert.ToBase64String(response.ReturnValue[0].Image1);
-                response.ReturnValue[0].Image = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
-            }
-            //}
-            return Ok(response);
-        }
-
-        //Get All Dropdowns
-        [HttpGet]
-        [Route("getbyPatientName")]
-        public async Task<IActionResult> GetbyPatientName([FromQuery] PatientImagesDTO patientImagesDTO)
-        {
-            patientImagesDTO.UserIdC = currentUser.LoginId;
-            patientImagesDTO.Mode = "searchbyPatientName";
-            var response = await _Service.GetAll(patientImagesDTO);
-            //if (response != null && response.ReturnValue.Count > 0 && response.ReturnValue != null)
-            //{
-            //  for (int i = 0; i < response.ReturnValue.Count; i++)
-            //  {
-            //      string imageBase64Data = Convert.ToBase64String(response.ReturnValue[i].Image1);
-            //      response.ReturnValue[i].Image = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
-            //  }
-            //}
-            return Ok(response);
-        }
-
-        //Get All Dropdowns
-        [HttpGet]
-        [Route("getautosuggestpatient")]
-        public async Task<IActionResult> GetPatientNumber([FromQuery] PatientImagesDTO patientImagesDTO)
-        {
-            patientImagesDTO.UserIdC = currentUser.LoginId;
-            patientImagesDTO.Mode = "searchautosuggest";
-            var response = await _Service.GetAll(patientImagesDTO);
-            if (response != null)
-            {
-                return Ok(response);
-            }
-            else
-                return BadRequest("Not Found");
-        }
-
 
         [HttpPost]
-        public async Task<IActionResult> Insert([FromForm] PatientImagesDTO patientImagesDTO, List<IFormFile> formFile)
+        public async Task<IActionResult> Insert([FromBody] PatientImagesDTO patientImagesDTO)
         {
-            ReturnObject<long> retVal = new ReturnObject<long>();
-            foreach (var item in formFile)
-            {
-                MemoryStream ms = new MemoryStream();
-                item.CopyTo(ms);
-                ms.Close();
-                ms.Dispose();
-                patientImagesDTO.UserIdC = currentUser.LoginId;
-                patientImagesDTO.Mode = "insert";
-                patientImagesDTO.ImageName = item.FileName;
-                patientImagesDTO.Image1 = ms.ToArray();
-                retVal = await _Service.Insert(patientImagesDTO);
-                if (!retVal.Success)
-                    break;
+            patientImagesDTO.UserIdC = currentUser.LoginId;
+            patientImagesDTO.Mode = "insert";
+            var response = await _service.InsertAsync(patientImagesDTO);
+            return Ok(response);
+        }
 
-            }
-
-            return Ok(retVal);
-
-
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody] PatientImagesDTO patientImagesDTO)
+        {
+            patientImagesDTO.UserIdC = currentUser.LoginId;
+            patientImagesDTO.Mode = patientImagesDTO.Mode ?? "update"; //update status, update case type
+            var response = await _service.UpdateAsync(patientImagesDTO);
+            return Ok(response);
         }
 
         [HttpDelete]
         [Route("{id:long}")]
         public async Task<IActionResult> Delete(long id)
         {
-            PatientImagesDTO patientImagesDTO = new PatientImagesDTO();
-            patientImagesDTO.UserIdC = currentUser.LoginId;
-            patientImagesDTO.PatientImagesId = id;
-            patientImagesDTO.Mode = "delete";
-            var response = await _Service.Delete(patientImagesDTO);
-            return Ok(response);
-        }
-
-        [HttpGet]
-        [Route("getreport")]
-        public async Task<IActionResult> GetReport([FromQuery] PatientImagesDTO patientImagesDTO)
-        {
-            patientImagesDTO.UserIdC = currentUser.LoginId;
-            patientImagesDTO.Mode = "report";
-            var response = await _Service.GetAll(patientImagesDTO);
+            var response = await _service.DeleteAsync(id);
             return Ok(response);
         }
     }

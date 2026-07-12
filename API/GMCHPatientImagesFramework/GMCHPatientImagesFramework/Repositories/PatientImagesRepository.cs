@@ -1,11 +1,6 @@
-using GMCHPatientImagesDtos.DTOs;
+using ConfigurationDtos.DTOs;
 using GMCHPatientImagesFramework.Repositories.Interfaces;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GMCHPatientImagesFramework.Repositories
 {

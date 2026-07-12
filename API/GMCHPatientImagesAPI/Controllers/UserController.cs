@@ -1,18 +1,11 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using GMCHPatientImages.Utils;
 using GMCHPatientImagesDtos.DTOs;
 using GMCHPatientImagesFramework.Services.Interfaces;
-using System.Net.Mail;
-using System.Net;
-using GMCHPatientImages.Utils;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using System.Threading.Tasks;
 
 namespace GMCHPatientImages.Controllers
 {

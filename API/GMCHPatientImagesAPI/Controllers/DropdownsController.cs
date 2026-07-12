@@ -1,12 +1,8 @@
 using GMCHPatientImagesDtos.DTOs;
 using GMCHPatientImagesFramework.Services.Interfaces;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace GMCHPatientImages.Controllers
@@ -29,7 +25,7 @@ namespace GMCHPatientImages.Controllers
         //Get All Dropdowns
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] DropdownsDTO dropdownsDTO)
-            {
+        {
             dropdownsDTO.UserIdC = currentUser.LoginId; 
             var response = await _Service.GetAll(dropdownsDTO);
             return Ok(response);

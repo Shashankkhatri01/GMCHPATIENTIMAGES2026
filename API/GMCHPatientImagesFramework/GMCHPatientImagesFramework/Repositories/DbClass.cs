@@ -186,6 +186,74 @@ namespace GMCHPatientImagesFramework.Repositories
 
         }
 
+        public async Task<long> ExecuteStoredProcedureBulkReturnAsync<T>(
+            string storedProc,
+            T paramModel,
+            DataTable imageTable,
+            string tvpParameterName,
+            string tvpTypeName)
+        {
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+                SqlCommand dbCommand = new SqlCommand
+                {
+                    Connection = con,
+                    CommandType = CommandType.StoredProcedure,
+                    CommandText = storedProc
+                };
+
+                // Existing scalar parameters
+                dbCommand.AddBulkParameter(paramModel);
+
+                // Remove the Images property because AddBulkParameter
+                // will already have added it incorrectly.
+                if (dbCommand.Parameters.Contains(tvpParameterName))
+                    dbCommand.Parameters.RemoveAt(tvpParameterName);
+
+                // Add TVP parameter
+                SqlParameter tvp = new SqlParameter(tvpParameterName, SqlDbType.Structured)
+                {
+                    TypeName = tvpTypeName,
+                    Value = imageTable
+                };
+
+                dbCommand.Parameters.Add(tvp);
+
+                SqlParameter ret = new SqlParameter("ret_val", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.ReturnValue
+                };
+
+                dbCommand.Parameters.Add(ret);
+
+                await con.OpenAsync();
+
+                SqlTransaction tran = con.BeginTransaction();
+
+                dbCommand.Transaction = tran;
+
+                try
+                {
+                    await dbCommand.ExecuteNonQueryAsync();
+
+                    int retVal = Convert.ToInt32(ret.Value);
+
+                    if (retVal > 0)
+                    {
+                        tran.Commit();
+                        return retVal;
+                    }
+
+                    tran.Rollback();
+                    return retVal;
+                }
+                catch
+                {
+                    tran.Rollback();
+                    throw;
+                }
+            }
+        }
         public async Task<TResponseParam> GetDataFromStoredProcedureAsync<TRequestParam, TResponseParam>(string StoredProcName, TRequestParam paramModel) where TResponseParam : new()
         {
             TResponseParam result;
@@ -224,7 +292,6 @@ namespace GMCHPatientImagesFramework.Repositories
             }
 
         }
-
         public async Task<DataSet> GetDataFromStoredProcedureAsync<TRequestParam>(string StoredProcName, TRequestParam paramModel)
         {
 

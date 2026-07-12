@@ -1,23 +1,15 @@
-using System;
-
+using ConfigurationDtos.DTOs;
+using GMCHPatientImagesDtos.DTOs;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-using GMCHPatientImagesDtos.DTOs;
-
-namespace GMCHPatientImagesFramework.Services.Interfaces
-   
+namespace GMCHPatientImagesFramework.Services.Interfaces 
 {
     public interface IPatientImagesService
-    { 
-        //Insert
-        Task<ReturnObject<long>> Insert(PatientImagesDTO patientImagesDTO); 
-        //Get All Data
-        Task<ReturnObject<List<PatientImagesDTO>>> GetAll(PatientImagesDTO patientImagesDTO);
-        //Delete Data
-        Task<ReturnObject<long>> Delete(PatientImagesDTO patientImagesDTO);
-
-  }
+    {
+        Task<ReturnObject<List<PatientImagesDTO>>> GetAllAsync(PatientImagesDTO patientImagesDTO);
+        Task<ReturnObject<long>> InsertAsync(PatientImagesDTO patientImagesDTO);
+        Task<ReturnObject<long>> UpdateAsync(PatientImagesDTO patientImagesDTO);
+        Task<ReturnObject<bool>> DeleteAsync(long id);
+    }
 }

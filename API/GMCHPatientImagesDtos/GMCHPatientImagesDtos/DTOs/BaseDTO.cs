@@ -9,7 +9,6 @@ namespace GMCHPatientImagesDtos.DTOs
         public Nullable<bool> IsActive { get; set; }
         [JsonIgnore]
         public Nullable<long> UserIdC { get; set; }
-        [JsonIgnore]
         public string Mode { get; set; } 
   }
 }
