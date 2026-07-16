@@ -32,10 +32,11 @@ namespace GMCHPatientImages.Controllers
         }
 
         [HttpDelete]
-        [Route("{id:long}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Delete([FromQuery] PatientImagesDetailDTO patientImagesDetailDTO)
         {
-            var response = await _service.DeleteAsync(id);
+            patientImagesDetailDTO.UserIdC = currentUser.LoginId;
+            patientImagesDetailDTO.Mode = "delete";
+            var response = await _service.DeleteAsync(patientImagesDetailDTO);
             return Ok(response);
         }
     }

@@ -23,5 +23,10 @@ namespace GMCHPatientImagesDtos.DTOs
         public string FooterPath { get; set; }
         public string LogoPath { get; set; }
         public string GoogleAPIKey { get; set; }
+        public bool AllowWhatsApp { get; set; }
+        public string WhastAppBaseUrl { get; set; }
+        public string WhatsAppAPIKey { get; set; }
+        public string AppURL { get; set; }
+        public int OTPExpiryMinutes { get; set; }
     }
 }

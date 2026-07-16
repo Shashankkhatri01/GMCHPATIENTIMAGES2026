@@ -6,7 +6,7 @@ namespace GMCHPatientImagesFramework.Services.Interfaces
 {
     public interface IPatientImagesDetailService
     { 
-        Task<ReturnObject<List<PatientImagesDetailDTO>>> GetAllAsync(PatientImagesDetailDTO patientImagesDetailDTO);
-        Task<ReturnObject<bool>> DeleteAsync(long id);
+        Task<ReturnObject<List<PatientImagesDetailResponseDTO>>> GetAllAsync(PatientImagesDetailDTO patientImagesDetailDTO);
+        Task<ReturnObject<long>> DeleteAsync(PatientImagesDetailDTO patientImagesDetailDTO);
     }
 }

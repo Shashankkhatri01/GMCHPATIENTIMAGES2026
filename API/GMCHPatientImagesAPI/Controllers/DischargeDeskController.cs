@@ -31,5 +31,14 @@ namespace GMCHPatientImages.Controllers
             var response = await _service.GetAllAsync(dischargeDeskRequestDTO);
             return Ok(response);
         }
+
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody] DischargeDeskRequestDTO dischargeDeskRequestDTO)
+        {
+            dischargeDeskRequestDTO.UserIdC = currentUser.LoginId;
+            dischargeDeskRequestDTO.Mode = "updatestatus";
+            var response = await _service.UpdateAsync(dischargeDeskRequestDTO);
+            return Ok(response);
+        }
     }
 }

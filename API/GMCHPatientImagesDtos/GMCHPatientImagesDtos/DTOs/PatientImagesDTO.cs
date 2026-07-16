@@ -28,8 +28,7 @@ namespace ConfigurationDtos.DTOs
         public string CurrentStatus { get; set; }
         [IgnoreParam]
         public DateTime? CrDate { get; set; }
-        public string UserName { get; set; }
-        [IgnoreParam]
+        public string UserName { get; set; }        
         public bool IsLock { get; set; }
         [IgnoreParam]
         public bool IsOutside { get; set; }

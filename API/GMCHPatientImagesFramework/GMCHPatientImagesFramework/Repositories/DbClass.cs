@@ -1,4 +1,5 @@
 
+using GMCHPatientImagesFramework.Repositories.Interfaces;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections;
@@ -346,9 +347,76 @@ namespace GMCHPatientImagesFramework.Repositories
                     throw;
                 }
             }
-
         }
 
+        public async Task<TResponse> GetMultiResultFromStoredProcedureAsync<TRequestParam, TResponse>(
+    string storedProcName,
+    TRequestParam paramModel)
+    where TResponse : class, new()
+        {
+            DataSet ds = new DataSet();
+
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+                await con.OpenAsync();
+
+                SqlCommand command = new SqlCommand(storedProcName, con);
+                command.CommandType = CommandType.StoredProcedure;
+                command.AddBulkParameter(paramModel);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(ds);
+
+                if (ds.Tables.Count == 0)
+                    return default;
+
+                TResponse response = new TResponse();
+
+                var properties = typeof(TResponse).GetProperties();
+
+                int tableIndex = 0;
+
+                foreach (var property in properties)
+                {
+                    if (tableIndex >= ds.Tables.Count)
+                        break;
+
+                    // List<T>
+                    if (property.PropertyType.IsGenericType &&
+                        property.PropertyType.GetGenericTypeDefinition() == typeof(List<>))
+                    {
+                        var childType = property.PropertyType.GetGenericArguments()[0];
+
+                        var method = typeof(SqlParameterExtension)
+                            .GetMethod("ToList")
+                            .MakeGenericMethod(childType);
+
+                        var list = method.Invoke(null, new object[] { ds.Tables[tableIndex] });
+
+                        property.SetValue(response, list);
+                    }
+                    else
+                    {
+                        var method = typeof(SqlParameterExtension)
+                            .GetMethod("ToList")
+                            .MakeGenericMethod(property.PropertyType);
+
+                        var list = method.Invoke(null, new object[] { ds.Tables[tableIndex] });
+
+                        var first =
+                            ((System.Collections.IEnumerable)list)
+                            .Cast<object>()
+                            .FirstOrDefault();
+
+                        property.SetValue(response, first);
+                    }
+
+                    tableIndex++;
+                }
+
+                return response;
+            }
+        }
 
     }
 

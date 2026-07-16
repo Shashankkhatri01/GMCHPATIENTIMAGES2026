@@ -8,5 +8,6 @@ namespace GMCHPatientImagesFramework.Services.Interfaces
     public interface IDischargeDeskService
     {
         Task<ReturnObject<DischargeDeskResponseDTO>> GetAllAsync(DischargeDeskRequestDTO dischargeDeskRequestDTO);
+        Task<ReturnObject<long>> UpdateAsync(DischargeDeskRequestDTO dischargeDeskRequestDTO);
     }
 }

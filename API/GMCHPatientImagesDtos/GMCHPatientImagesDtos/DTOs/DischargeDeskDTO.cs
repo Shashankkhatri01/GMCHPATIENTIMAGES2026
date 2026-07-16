@@ -1,6 +1,7 @@
 ﻿using GMCHPatientImagesDtos.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace ConfigurationDtos.DTOs
 {
@@ -13,12 +14,18 @@ namespace ConfigurationDtos.DTOs
         public DateTime? AdmissionDate { get; set; }
         public int PatientTypeId { get; set; }
         public string PatientName { get; set; }
+        public string FinalStatus { get; set; }
+        public string Remark { get; set; }
+        public string MobileNo { get; set; }
+        public bool SendNotification { get; set; }
     }
 
     public class DischargeDeskResponseDTO : BaseDTO
     {
         public DischargeDeskDetailDTO Detail { get; set; }
         public List<DischargeDeskImagesDTO> Images { get; set; }
+        public List<PatientUpdateHistoryDTO> PatientUpdateHistoryDTOs { get; set; }
+        public List<PatientNotificationHistoryDTO> PatientNotificationHistoryDTOs { get; set; }
     }
 
     public class DischargeDeskDetailDTO
@@ -55,6 +62,28 @@ namespace ConfigurationDtos.DTOs
         public string Longitute { get; set; }
         public string LocationName { get; set; }
         public string StatusName { get; set; }
+    }
+
+    public class PatientUpdateHistoryDTO
+    {
+        public string ActionName { get; set; }
+        public string ActionTakenBy { get; set; }
+        public DateTime? ActionDateTime { get; set; }
+        public string FieldName { get; set; }
+        public string OldValue { get; set; }
+        public string NewValue { get; set; }
+    }
+
+    public class PatientNotificationHistoryDTO
+    {
+        public string CampaignName { get; set; }
+        public string Destination { get; set; }
+        public string TemplateParams     { get; set; }
+        public bool IsDelivered { get; set; }
+        public int StatusCode { get; set; }
+        public string RawResponse { get; set; }
+        public string UserName { get; set; }
+        public DateTime? CrDate { get; set; }
     }
 
     public class DischargeDeskFullDetailDTO

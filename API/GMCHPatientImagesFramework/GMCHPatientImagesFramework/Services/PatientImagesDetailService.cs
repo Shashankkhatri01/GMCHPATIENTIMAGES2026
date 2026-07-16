@@ -26,28 +26,69 @@ namespace GMCHPatientImagesFramework.Services
             _appSettings = appsettings.Value;
             _repository = repository;
         }
-        public async Task<ReturnObject<List<PatientImagesDetailDTO>>> GetAllAsync(PatientImagesDetailDTO patientImagesDetailDTO)
+        public async Task<ReturnObject<List<PatientImagesDetailResponseDTO>>> GetAllAsync(PatientImagesDetailDTO patientImagesDetailDTO)
         {
             var response = await _repository.GetAllAsync(patientImagesDetailDTO);
 
-            if (response.Count <= 0)
+            if (response == null || !response.Any())
                 throw new AppException($"Records {StringConstants.RecordNotFound}");
 
-            return new ReturnObject<List<PatientImagesDetailDTO>>
+            var result = response
+                .GroupBy(x => new
+                {
+                    x.StatusName
+                })
+                .Select(g =>
+                {
+                    var first = g.First();
+
+                    return new PatientImagesDetailResponseDTO
+                    {
+                        PatientImagesId = first.PatientImagesId,
+                        StatusName = first.StatusName,
+
+                        particularsDTOs = g
+                            .Select(x => new PatientImagesParticularsDTO
+                            {
+                                PatientImagesDetailId = x.PatientImagesDetailId,
+                                UserName = x.UserName,
+                                Latitute = x.Latitute,
+                                Longitute = x.Longitute,
+                                LocationName = x.LocationName,
+                                ImageName = x.ImageName,
+                                ImageFull = x.ImageFull,
+                                CrDate = x.CrDate
+                            })
+                            .OrderBy(x => x.CrDate)
+                            .ToList()
+                    };
+                })
+                .ToList();
+
+            return new ReturnObject<List<PatientImagesDetailResponseDTO>>
             {
-                ReturnValue = response,
+                ReturnValue = result,
                 Status = true,
                 Success = true
             };
         }
-        public async Task<ReturnObject<bool>> DeleteAsync(long id)
+        public async Task<ReturnObject<long>> DeleteAsync(PatientImagesDetailDTO patientImagesDetailDTO)
         {
-            var response = await _repository.DeleteAsync(id);
+            var response = await _repository.DeleteAsync(patientImagesDetailDTO);
 
-            if (!response)
+            if (response <=0)
                 throw new AppException($"Image {StringConstants.DeletionFailed}");
 
-            return new ReturnObject<bool>
+            else if (response == -2)
+                return new ReturnObject<long>
+                {
+                    Message = $"Patient is Locked",
+                    ReturnValue = response,
+                    Status = true,
+                    Success = false,
+                };
+
+            return new ReturnObject<long>
             {
                 Message = $"Image {StringConstants.DeleteSuccess}",
                 ReturnValue = response,

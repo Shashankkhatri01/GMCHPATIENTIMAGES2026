@@ -144,6 +144,33 @@ namespace GMCHPatientImagesFramework.Services
                 if (response == 0)
                     throw new AppException($"Record {StringConstants.UpdateFailed}");
 
+                else if (response == -2)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Patient is Locked",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
+                else if (response == -3)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Patient is not discharged from HIS.",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
+                else if (response == -4)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Patient Images Exist! You cannot change case type",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
                 return new ReturnObject<long>
                 {
                     Message = $"Record {StringConstants.UpdateSuccess}",

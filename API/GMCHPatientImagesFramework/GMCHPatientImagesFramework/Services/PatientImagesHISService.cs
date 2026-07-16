@@ -118,14 +118,14 @@ namespace GMCHPatientImagesFramework.Services
                 if (response == 0)
                     throw new AppException($"Details {StringConstants.UpdateFailed}");
 
-                else if (response == -2)
-                    return new ReturnObject<long>
-                    {
-                        Message = $"Details {StringConstants.AlreadyExists}",
-                        ReturnValue = response,
-                        Status = true,
-                        Success = false,
-                    };
+                //else if (response == -2)
+                //    return new ReturnObject<long>
+                //    {
+                //        Message = $"Details {StringConstants.AlreadyExists}",
+                //        ReturnValue = response,
+                //        Status = true,
+                //        Success = false,
+                //    };
 
                 //else if (response == -3)
                 //    return new ReturnObject<long>
@@ -149,6 +149,15 @@ namespace GMCHPatientImagesFramework.Services
                     return new ReturnObject<long>
                     {
                         Message = $"Unique ID {StringConstants.AlreadyExists}",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
+                else if (response == -6)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Patient is Locked",
                         ReturnValue = response,
                         Status = true,
                         Success = false,
@@ -213,23 +222,32 @@ namespace GMCHPatientImagesFramework.Services
                 //        Success = false,
                 //    };
 
-                //else if (response == -4)
-                //    return new ReturnObject<long>
-                //    {
-                //        Message = $"Unique ID {StringConstants.RecordNotFound}",
-                //        ReturnValue = response,
-                //        Status = true,
-                //        Success = false,
-                //    };
+                else if (response == -4)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Unique ID {StringConstants.RecordNotFound}",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
 
-                //else if (response == -5)
-                //    return new ReturnObject<long>
-                //    {
-                //        Message = $"Unique ID {StringConstants.AlreadyExists}",
-                //        ReturnValue = response,
-                //        Status = true,
-                //        Success = false,
-                //    };
+                else if (response == -5)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Unique ID {StringConstants.AlreadyExists}",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
+                else if (response == -6)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Patient is Locked",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
 
                 return new ReturnObject<long>
                 {

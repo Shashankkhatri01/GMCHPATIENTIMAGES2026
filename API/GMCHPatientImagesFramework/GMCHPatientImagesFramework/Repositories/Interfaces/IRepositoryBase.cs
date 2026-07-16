@@ -14,6 +14,8 @@ namespace GMCHPatientImagesFramework.Repositories.Interfaces
         Task<KResponseParam> GetByIdAsync(TRequestParam requestParam);
         Task<KResponseParam> GetByIdAsync(long id);
         Task<List<KResponseParam>> GetAllByIdAsync(long id);
+        Task<TResponse> GetMultiResultAsync<TResponse>(TRequestParam requestParam)
+    where TResponse : class, new();
         Task<long> InsertAsync(TRequestParam requestParam);
         Task<long> InsertBulkAsync(TRequestParam requestParam,
             DataTable dt,

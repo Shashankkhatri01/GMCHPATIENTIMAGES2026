@@ -65,6 +65,14 @@ namespace GMCHPatientImagesFramework.Repositories
             return response;
         }
 
+        public async Task<TResponse> GetMultiResultAsync<TResponse>(TRequestParam requestParam)
+    where TResponse : class, new()
+        {
+            return await GetMultiResultFromStoredProcedureAsync<TRequestParam, TResponse>(
+                ProcedureName,
+                requestParam);
+        }
+
         public async Task<long> InsertAsync(TRequestParam requestParam)
         {
             var response = await ExecuteStoredProcedureReturnAsync<TRequestParam>(ProcedureName, requestParam );
