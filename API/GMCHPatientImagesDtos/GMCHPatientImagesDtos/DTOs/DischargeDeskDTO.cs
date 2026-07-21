@@ -52,22 +52,28 @@ namespace ConfigurationDtos.DTOs
         public DateTime? CrDate { get; set; }
         public string UserName { get; set; }
         public bool IsLock { get; set; }
+        public string FinalStatus { get; set; }
+        public int CompletePercentage { get; set; }
     }
 
     public class DischargeDeskImagesDTO
     {
+        public long PatientImagesDetailId { get; set; }
         public string ImageName { get; set; }
         public string ImageFull { get; set; }
         public string Latitute { get; set; }
         public string Longitute { get; set; }
         public string LocationName { get; set; }
         public string StatusName { get; set; }
+        public DateTime? CrDate { get; set; }
+        public string UserName { get; set; }
     }
 
     public class PatientUpdateHistoryDTO
     {
         public string ActionName { get; set; }
         public string ActionTakenBy { get; set; }
+        public string ActionTakenFor { get; set; }
         public DateTime? ActionDateTime { get; set; }
         public string FieldName { get; set; }
         public string OldValue { get; set; }
