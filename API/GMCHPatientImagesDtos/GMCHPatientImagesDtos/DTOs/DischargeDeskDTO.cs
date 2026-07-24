@@ -15,9 +15,12 @@ namespace ConfigurationDtos.DTOs
         public int PatientTypeId { get; set; }
         public string PatientName { get; set; }
         public string FinalStatus { get; set; }
+        public string RemarkId { get; set; }
         public string Remark { get; set; }
         public string MobileNo { get; set; }
         public bool SendNotification { get; set; }
+        public bool IsReOpen { get; set; }
+        public string TransactionIds { get; set; }
     }
 
     public class DischargeDeskResponseDTO : BaseDTO
@@ -48,11 +51,13 @@ namespace ConfigurationDtos.DTOs
         public bool IsOutside { get; set; }
         public string HISStatus { get; set; }
         public string CurrentStatus { get; set; }
-        public string Remark { get; set; }
         public DateTime? CrDate { get; set; }
         public string UserName { get; set; }
         public bool IsLock { get; set; }
         public string FinalStatus { get; set; }
+        public int RemarkId { get; set; }
+        public string Remark { get; set; }
+        public string TransactionIds { get; set; }
         public int CompletePercentage { get; set; }
     }
 
@@ -112,7 +117,8 @@ namespace ConfigurationDtos.DTOs
         public bool IsOutside { get; set; }
         public string HISStatus { get; set; }
         public string CurrentStatus { get; set; }
-        public string Remark { get; set; }
+        public int RemarkId { get; set; }
+        public string TransactionIds { get; set; }
         public DateTime? CrDate { get; set; }
         public string UserName { get; set; }
         public bool IsLock { get; set; }
