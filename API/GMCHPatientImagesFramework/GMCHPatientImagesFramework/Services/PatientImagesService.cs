@@ -68,8 +68,8 @@ namespace GMCHPatientImagesFramework.Services
                 if (string.IsNullOrWhiteSpace(patientImagesDTO.DoctorName))
                     throw new AppException("Please enter Doctor Name!");
 
-                if (string.IsNullOrWhiteSpace(patientImagesDTO.DepartmentName))
-                    throw new AppException("Please enter Department Name!");
+                if (patientImagesDTO.DepartmentId <= 0)
+                    throw new AppException("Please select Department Name!");
 
                 var response = await _repository.InsertAsync(patientImagesDTO);
 
@@ -135,8 +135,8 @@ namespace GMCHPatientImagesFramework.Services
                     if (string.IsNullOrWhiteSpace(patientImagesDTO.DoctorName))
                         throw new AppException("Please enter Doctor Name!");
 
-                    if (string.IsNullOrWhiteSpace(patientImagesDTO.DepartmentName))
-                        throw new AppException("Please enter Department Name!");
+                    if (patientImagesDTO.DepartmentId <= 0)
+                        throw new AppException("Please select Department Name!");
                 }
 
                 var response = await _repository.UpdateAsync(patientImagesDTO);

@@ -20,6 +20,7 @@ namespace ConfigurationDtos.DTOs
         public string WardName { get; set; }
         public string BedNumber { get; set; }
         public string DoctorName { get; set; }
+        public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
         public int CaseTypeId { get; set; }
         public string CaseTypeName { get; set; }

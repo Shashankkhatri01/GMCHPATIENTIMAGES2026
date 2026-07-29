@@ -78,6 +78,15 @@ namespace GMCHPatientImagesFramework.Services
                         Success = false,
                     };
 
+                else if (response == -7)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Department {StringConstants.RecordNotFound}",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
                 return new ReturnObject<long>
                 {
                     Message = $"Details {StringConstants.SavedSuccess}",
@@ -158,6 +167,15 @@ namespace GMCHPatientImagesFramework.Services
                     return new ReturnObject<long>
                     {
                         Message = $"Patient is Locked",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
+                else if (response == -7)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Department {StringConstants.RecordNotFound}",
                         ReturnValue = response,
                         Status = true,
                         Success = false,
