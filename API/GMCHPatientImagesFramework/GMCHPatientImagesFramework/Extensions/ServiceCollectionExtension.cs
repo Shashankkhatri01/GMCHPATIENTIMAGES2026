@@ -42,6 +42,8 @@ namespace GMCHPatientImagesFramework.Extensions
             services.AddHttpClient<IWhatsAppAPIService, WhatsAppAPIService>();
             services.AddTransient(typeof(IWhatsAppAPIRepository), typeof(WhatsAppAPIRepository));
 
+            services.AddTransient<IHealthCheckResponseService, HealthCheckResponseService>();
+
             return services;
         }
     }

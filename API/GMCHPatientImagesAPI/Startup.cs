@@ -44,7 +44,7 @@ namespace GMCHPatientImages
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "GMCHPatientImages.APIs", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "GMCHPatientPortal.APIs", Version = "v1" });
             });
 
             // configure strongly typed settings object
@@ -62,12 +62,12 @@ namespace GMCHPatientImages
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseSwagger();
-                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SocialApp.APIs v1"));
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("v1/swagger.json", "API v1"));
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GMCHPatientImages.APIs v1"));
+            //app.UseSwagger();
+            //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GMCHPatientImages.APIs v1"));
 
             app.UseHttpsRedirection();
 
