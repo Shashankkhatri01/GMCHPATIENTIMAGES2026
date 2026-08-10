@@ -74,6 +74,15 @@ namespace GMCHPatientImagesFramework.Services
                 if (response <= 0)
                     throw new AppException($"Image {StringConstants.SavedFailed}");
 
+                else if (response == -2)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Patient is Locked",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
                 return new ReturnObject<long>
                 {
                     Message = $"{dt.Rows.Count} Image(s) {StringConstants.SavedSuccess}",
