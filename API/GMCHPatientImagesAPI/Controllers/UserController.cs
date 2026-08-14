@@ -42,20 +42,18 @@ namespace GMCHPatientImages.Controllers
         [HttpPost("refresh-token")]
         public async Task<ActionResult<LoginDTO>> RefreshToken([FromQuery] string refreshToken)
         {
-            var response = await _userService.RefreshTokenAsync(refreshToken,"");
-           
+            var response = await _userService.RefreshTokenAsync(refreshToken,"");           
             return Ok(response);
         }
 
-    //Password Change
-    [Authorize]
-    [HttpPost("change-password")]
+        //Password Change
+        [Authorize]
+        [HttpPost("change-password")]
         public async Task<ActionResult<long>> ChangePassword([FromBody] ChangePasswordDTO changePasswordDTO)
         {
-             changePasswordDTO.LoginId = currentUser.LoginId;
+            changePasswordDTO.LoginId = currentUser.LoginId;
             changePasswordDTO.Mode = "changepassword";
             var response = await _userService.ChangePasswordAsync(changePasswordDTO);
-
             return Ok(response);
         }
 
@@ -65,16 +63,8 @@ namespace GMCHPatientImages.Controllers
         public async Task<IActionResult> ForgotPassword([FromBody] LoginDTO loginDTO)
         {
             loginDTO.Mode = "forgot-password";
-
             var response = await _userService.ForgotPassword(loginDTO);
-
-      return Ok(response.Success);
+            return Ok(response.Success);
         }
-
-        
-
-       
-
-          
     }    
 }

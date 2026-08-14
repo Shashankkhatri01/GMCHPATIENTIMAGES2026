@@ -1,31 +1,31 @@
 
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
 using GMCHPatientImagesDtos.DTOs;
 using GMCHPatientImagesFramework.Utils;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace GMCHPatientImages.Middlewares
 {
-   public class ErrorHandlerMiddleware   
+    public class ErrorHandlerMiddleware
     {
         private readonly RequestDelegate _next;
-
-        public ErrorHandlerMiddleware(RequestDelegate next)
+        private readonly AppSettings _appSettings;
+        public ErrorHandlerMiddleware(RequestDelegate next, IOptions<AppSettings> appSettings)
         {
             _next = next;
+            _appSettings = appSettings.Value;
         }
 
         public async Task Invoke(HttpContext context)
         {
             try
             {
-        await _next(context);
+                await _next(context);
             }
             catch (Exception error)
             {
@@ -40,7 +40,8 @@ namespace GMCHPatientImages.Middlewares
                         response.StatusCode = (int)HttpStatusCode.OK;
 
                         break;
-                    case UnauthorizedException e:
+                    case UnauthorizedException: // Custom exception
+                    case UnauthorizedAccessException: // Built-in exception
                         // custom application error
                         response.StatusCode = (int)HttpStatusCode.Unauthorized;
 
@@ -57,7 +58,7 @@ namespace GMCHPatientImages.Middlewares
                         // unhandled error
                         response.StatusCode = (int)HttpStatusCode.InternalServerError;
                         break;
-            //Object reference not set to an instance of an object.
+                        //Object reference not set to an instance of an object.
                 }
 
                 var options = new JsonSerializerOptions

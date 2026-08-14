@@ -47,6 +47,9 @@ namespace GMCHPatientImagesFramework.Extensions
             services.AddTransient(typeof(INotificationService), typeof(NotificationService));
             services.AddTransient(typeof(INotificationRepository), typeof(NotificationRepository));
 
+            services.AddTransient(typeof(IRegistrationService), typeof(RegistrationService));
+            services.AddTransient(typeof(IRegistrationRepository), typeof(RegistrationRepository));
+
             return services;
         }
     }
