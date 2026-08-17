@@ -16,7 +16,9 @@ namespace ConfigurationDtos.DTOs
         public DateTime? DOB { get; set; }
         public string Gender { get; set; }        
         public string MobileNo { get; set; }
+        public int PayerId { get; set; }
         public string PayerName { get; set; }
+        public int WardId { get; set; }
         public string WardName { get; set; }
         public string BedNumber { get; set; }
         public int DoctorId { get; set; }

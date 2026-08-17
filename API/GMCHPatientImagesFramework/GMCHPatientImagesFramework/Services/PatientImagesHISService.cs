@@ -96,6 +96,15 @@ namespace GMCHPatientImagesFramework.Services
                         Success = false,
                     };
 
+                else if (response == -9)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Payer {StringConstants.RecordNotFound}",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
                 return new ReturnObject<long>
                 {
                     Message = $"Details {StringConstants.SavedSuccess}",
@@ -203,6 +212,15 @@ namespace GMCHPatientImagesFramework.Services
                     return new ReturnObject<long>
                     {
                         Message = $"Doctor {StringConstants.RecordNotFound}",
+                        ReturnValue = response,
+                        Status = true,
+                        Success = false,
+                    };
+
+                else if (response == -10)
+                    return new ReturnObject<long>
+                    {
+                        Message = $"Payer {StringConstants.RecordNotFound}",
                         ReturnValue = response,
                         Status = true,
                         Success = false,
