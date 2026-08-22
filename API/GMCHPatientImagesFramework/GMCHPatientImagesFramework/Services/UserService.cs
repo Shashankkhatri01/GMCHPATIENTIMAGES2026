@@ -1,17 +1,12 @@
-
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using GMCHPatientImagesDtos.DTOs;
 using GMCHPatientImagesFramework.Repositories.Interfaces;
 using GMCHPatientImagesFramework.Services.Interfaces;
-using GMCHPatientImagesFramework.Utils;
 using GMCHPatientImagesFramework.Type;
-using GMCHPatientImages.Framework.Utils;
+using GMCHPatientImagesFramework.Utils;
+using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace GMCHPatientImagesFramework.Services
 {
@@ -19,10 +14,8 @@ namespace GMCHPatientImagesFramework.Services
     public class UserService : IUserService
     {
         private readonly AppSettings _appSettings;
-        private IUserRepository _repository;
-        
+        private IUserRepository _repository;        
         private TokenManager _tokenManager;
-
 
         public UserService(IUserRepository userRepositorie, IOptions<AppSettings> appSettings)
         {
@@ -68,8 +61,7 @@ namespace GMCHPatientImagesFramework.Services
             if (loginDTO.LoginName == null)
                 throw new AppException($"Please enter email address!");
             if (loginDTO.MobileNo == null)
-                throw new AppException($"Please enter mobile no!");
-            
+                throw new AppException($"Please enter mobile no!");            
 
             var response = await _repository.UpdateAsync(loginDTO);
 
@@ -130,35 +122,54 @@ namespace GMCHPatientImagesFramework.Services
         }
 
         //Token
-        public async Task<ReturnObject<LoginDTO>> RefreshTokenAsync(string token, string ipAddress)
+        public async Task<ReturnObject<LoginDTO>> RefreshTokenAsync(
+                string token,
+                string ipAddress)
         {
             ReturnObject<LoginDTO> result = new ReturnObject<LoginDTO>();
             result.ReturnValue = new LoginDTO();
+
+            // Generate new refresh token
             var newRefreshToken = _tokenManager.generateRefreshToken(ipAddress);
+
             newRefreshToken.NewToken = newRefreshToken.Token;
             newRefreshToken.Token = token;
             newRefreshToken.Mode = "existing";
-            var tokenResponse = await _repository.SaveRefreshTokenAsync(newRefreshToken);
+
+            // Validate existing refresh token and rotate it
+            var tokenResponse =
+                await _repository.SaveRefreshTokenAsync(newRefreshToken);
 
             if (tokenResponse == -2 || tokenResponse == 0)
                 throw new UnauthorizedException(StringConstants.LoginIssue);
 
-            LoginDTO loginDTO = new  LoginDTO ();
-            loginDTO.LoginId = Convert.ToInt32(tokenResponse);
-            loginDTO.Mode = "getById";
+            int loginId = Convert.ToInt32(tokenResponse);
 
-      LoginRequestDTO loginRequestDTO = new LoginRequestDTO();
-      loginRequestDTO.LoginId = Convert.ToInt32(tokenResponse);
-      loginRequestDTO.Mode = "getById";
+            // Get current user from DB
+            LoginRequestDTO loginRequestDTO = new LoginRequestDTO
+            {
+                LoginId = loginId,
+                Mode = "getById"
+            };
 
-      var response = await _repository.GetUserLogin(loginRequestDTO);
+            var response =
+                await _repository.GetUserLogin(loginRequestDTO);
 
-            LoginDTO userDTO = new  LoginDTO 
+            if (response == null)
+                throw new UnauthorizedException("User not found.");
+
+            // IMPORTANT: Check current account status
+            if (!response.IsActive)
+                throw new UnauthorizedException("User is inactive.");
+
+            // Create JWT using CURRENT DB TokenVersion
+            LoginDTO userDTO = new LoginDTO
             {
                 LoginId = response.LoginId,
                 LoginName = response.LoginName,
-                
+                TokenVersion = response.TokenVersion
             };
+
             var jwtToken = _tokenManager.generateJwtToken(userDTO);
 
             result.ReturnValue.LoginId = userDTO.LoginId;
@@ -167,6 +178,8 @@ namespace GMCHPatientImagesFramework.Services
             result.ReturnValue.RefreshToken = newRefreshToken.NewToken;
 
             result.Success = true;
+            result.Status = true;
+
             return result;
         }
 

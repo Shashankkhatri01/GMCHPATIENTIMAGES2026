@@ -24,14 +24,22 @@ namespace GMCHPatientImagesFramework.Utils
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] { new Claim("LoginId", user.LoginId.ToString()),
-                //new Claim("ClientId", user.ClientId.ToString()) ,
-                //  new Claim("RoleName", user.RoleName.ToString()) ,
-                    }
+                Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim("LoginId", user.LoginId.ToString()),
+                    new Claim("TokenVersion", user.TokenVersion.ToString())
+                }),
+
+                            Expires = DateTime.UtcNow.AddMinutes(
+                    long.Parse(_appSettings.JwtTokenDuration)
                 ),
-                Expires = DateTime.UtcNow.AddMinutes(long.Parse(_appSettings.JwtTokenDuration)),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+
+                            SigningCredentials = new SigningCredentials(
+                    new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature
+                )
             };
+
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }

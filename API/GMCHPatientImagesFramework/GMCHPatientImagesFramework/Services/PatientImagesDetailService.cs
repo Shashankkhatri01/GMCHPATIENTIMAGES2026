@@ -46,6 +46,8 @@ namespace GMCHPatientImagesFramework.Services
                     {
                         PatientImagesId = first.PatientImagesId,
                         StatusName = first.StatusName,
+                        RemarkName = first.RemarkName,
+                        Remark = first.Remark,
 
                         particularsDTOs = g
                             .Select(x => new PatientImagesParticularsDTO

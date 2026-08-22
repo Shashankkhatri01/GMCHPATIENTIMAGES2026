@@ -14,6 +14,7 @@ namespace GMCHPatientImagesDtos.DTOs
         public string Longitute { get; set; }
         public string LocationName { get; set; }
         public string StatusName { get; set; }
+        public string RemarkName { get; set; }
         public string Remark { get; set; }
         public DateTime? CrDate { get; set; }
     }
@@ -22,6 +23,8 @@ namespace GMCHPatientImagesDtos.DTOs
     {
         public long PatientImagesId { get; set; }        
         public string StatusName { get; set; }
+        public string RemarkName { get; set; }
+        public string Remark { get; set; }
         public List<PatientImagesParticularsDTO> particularsDTOs { get; set; }
     }
 

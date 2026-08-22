@@ -11,6 +11,8 @@ namespace GMCHPatientImagesDtos.DTOs
         public string Longitute { get; set; }
         public string LocationName { get; set; }
         public int StatusId { get; set; }
+        public int RemarkId { get; set; }
+        public string Remark { get; set; }
         public List<PatientImageBulkUploadDTO> Images { get; set; } = new();
     }
     public class PatientImageBulkUploadDTO

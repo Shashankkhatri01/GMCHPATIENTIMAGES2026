@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 using GMCHPatientImagesDtos.Attributes;
+using System.Text.Json.Serialization;
 
 namespace GMCHPatientImagesDtos.DTOs
 {
@@ -15,6 +10,10 @@ namespace GMCHPatientImagesDtos.DTOs
        public string LoginName { get; set; }
        public string LoginPassword { get; set; }
        [JsonIgnore]
-       public string Mode { get; set; } 
-  }
+       public string Mode { get; set; }
+       [IgnoreParam]
+       public int TokenVersion { get; set; }
+       [IgnoreParam]
+       public bool IsActive { get; set; }
+    }
 }

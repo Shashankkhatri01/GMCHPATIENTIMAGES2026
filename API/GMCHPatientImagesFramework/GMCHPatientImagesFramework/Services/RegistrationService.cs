@@ -27,7 +27,7 @@ namespace GMCHPatientImagesFramework.Services
         {
             var response = await _registrationRepository.GetAllAsync(registrationRequestDTO);
 
-            if (response == null)
+            if (response == null || response.Count <=0)
                 throw new AppException($"Users {StringConstants.RecordNotFound}");
 
             return new ReturnObject<List<RegistrationResponseDTO>>

@@ -11,7 +11,10 @@ namespace GMCHPatientImagesDtos.DTOs
          public string MobileNo { get; set; } 
         public string EmailAddress { get; set; }
         public int RoleId { get; set; }
+        public string RoleName { get; set; }
         public int DepartmentId { get; set; }
+        public int TokenVersion { get; set; }
+        public bool IsActive { get; set; }
         public Nullable<bool> IsView { get; set; }
         public Nullable<bool> IsDelete { get; set; }
         public Nullable<bool> IsAdd { get; set; } 

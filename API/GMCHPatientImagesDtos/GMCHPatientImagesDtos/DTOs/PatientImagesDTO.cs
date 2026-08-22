@@ -27,6 +27,8 @@ namespace ConfigurationDtos.DTOs
         public string DepartmentName { get; set; }
         public int CaseTypeId { get; set; }
         public string CaseTypeName { get; set; }
+        public string FontColorCode { get; set; }
+        public string BackgroundColorCode { get; set; }
         public string HISStatus { get; set; }
         public int StatusId { get; set; }
         public string CurrentStatus { get; set; }

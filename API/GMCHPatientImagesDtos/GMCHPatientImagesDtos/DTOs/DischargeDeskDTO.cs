@@ -51,6 +51,8 @@ namespace ConfigurationDtos.DTOs
         public bool IsOutside { get; set; }
         public string HISStatus { get; set; }
         public string CurrentStatus { get; set; }
+        public string FontColorCode { get; set; }
+        public string BackgroundColorCode { get; set; }
         public DateTime? CrDate { get; set; }
         public string UserName { get; set; }
         public bool IsLock { get; set; }
@@ -70,6 +72,8 @@ namespace ConfigurationDtos.DTOs
         public string Longitute { get; set; }
         public string LocationName { get; set; }
         public string StatusName { get; set; }
+        public string RemarkName { get; set; }
+        public string Remark { get; set; }
         public DateTime? CrDate { get; set; }
         public string UserName { get; set; }
     }
