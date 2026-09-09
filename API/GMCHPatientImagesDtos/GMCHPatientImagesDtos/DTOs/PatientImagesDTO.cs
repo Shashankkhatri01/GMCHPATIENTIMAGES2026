@@ -8,6 +8,7 @@ namespace ConfigurationDtos.DTOs
     {
         public long ID { get; set; }
         public long PatientImagesId { get; set; }
+        public string PatientImagesIds { get; set; }
         public string HIS_ID { get; set; }
         public string AdmissionNo { get; set; }
         public DateTime? AdmissionDate { get; set; }
@@ -33,10 +34,24 @@ namespace ConfigurationDtos.DTOs
         public int StatusId { get; set; }
         public string CurrentStatus { get; set; }
         [IgnoreParam]
+        public bool ConsentStatus { get; set; }
+        [IgnoreParam]
+        public bool IsConsentShow { get; set; }
+        [IgnoreParam]
         public DateTime? CrDate { get; set; }
+        public DateTime? FromDate { get; set; }
+        public DateTime? ToDate { get; set; }
         public string UserName { get; set; }        
-        public bool IsLock { get; set; }
+        public bool? IsLock { get; set; }
         [IgnoreParam]
         public bool IsOutside { get; set; }
+        [IgnoreParam]
+        public int TotalPhotosUploaded { get; set; }
+        [IgnoreParam]
+        public bool IsPhotoPending { get; set; }
+        [IgnoreParam]
+        public int PhotoPendingHours { get; set; }
+        [IgnoreParam]
+        public string StatusDetails { get; set; }
     }
 }

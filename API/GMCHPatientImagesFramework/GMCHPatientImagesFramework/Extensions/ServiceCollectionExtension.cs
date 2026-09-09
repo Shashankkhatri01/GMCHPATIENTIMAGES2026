@@ -52,6 +52,15 @@ namespace GMCHPatientImagesFramework.Extensions
 
             services.AddScoped<IUserTokenValidationService, UserTokenValidationService>();
 
+            services.AddTransient(typeof(IModulesService), typeof(ModulesService));
+            services.AddTransient(typeof(IModulesRepository), typeof(ModulesRepository));
+
+            services.AddTransient(typeof(IConsentService), typeof(ConsentService));
+            services.AddTransient(typeof(IConsentRepository), typeof(ConsentRepository));
+
+            services.AddTransient(typeof(IDashboardService), typeof(DashboardService));
+            services.AddTransient(typeof(IDashboardRepository), typeof(DashboardRepository));
+
             return services;
         }
     }

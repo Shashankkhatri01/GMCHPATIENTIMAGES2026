@@ -45,7 +45,7 @@ namespace GMCHPatientImagesFramework.Services
                 else if (response == -2)
                     return new ReturnObject<long>
                     {
-                        Message = $"HIS ID {StringConstants.AlreadyExists}",
+                        Message = $"UHID and IPD Number {StringConstants.AlreadyExists}",
                         ReturnValue = response,
                         Status = true,
                         Success = false,
