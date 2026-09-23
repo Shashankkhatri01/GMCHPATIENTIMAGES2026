@@ -1,20 +1,15 @@
+using DinkToPdf;
+using DinkToPdf.Contracts;
 using GMCHPatientImages.Middlewares;
-
+using GMCHPatientImagesFramework.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using ServiceStack.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GMCHPatientImagesFramework.Extensions;
-using DinkToPdf.Contracts;
-using DinkToPdf;
+using Amazon.Extensions.NETCore.Setup;
+using Amazon.Rekognition;
 
 namespace GMCHPatientImages
 {
@@ -50,9 +45,45 @@ namespace GMCHPatientImages
             // configure strongly typed settings object
             services.Configure<GMCHPatientImagesDtos.DTOs.AppSettings>(Configuration.GetSection("AppSettings"));
 
-             services.AddTransactionFramework(Configuration);
+            services.AddTransactionFramework(Configuration);
             services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
-            services.AddControllers();
+
+            // =====================================================
+            // FACE AUTHENTICATION
+            // =====================================================
+
+            var allowFaceAuthentication =
+                Configuration.GetValue<bool>("AppSettings:AllowFaceAuthentication");
+
+            if (allowFaceAuthentication)
+            {
+                // =====================================================
+                // AWS REKOGNITION
+                // =====================================================
+
+                var awsOptions = Configuration.GetAWSOptions();
+
+                services.AddDefaultAWSOptions(awsOptions);
+                services.AddAWSService<IAmazonRekognition>();
+
+                // =====================================================
+                // AWS Face Verification Service
+                // =====================================================
+
+                services.AddScoped<
+                    GMCHPatientImagesFramework.Services.FaceVerification.IFaceVerificationService,
+                    GMCHPatientImagesFramework.Services.FaceVerification.AwsFaceVerificationService>();
+            }
+            else
+            {
+                // =====================================================
+                // Face Authentication Disabled
+                // =====================================================
+
+                services.AddScoped<
+                    GMCHPatientImagesFramework.Services.FaceVerification.IFaceVerificationService,
+                    GMCHPatientImagesFramework.Services.FaceVerification.NoOpFaceVerificationService>();
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

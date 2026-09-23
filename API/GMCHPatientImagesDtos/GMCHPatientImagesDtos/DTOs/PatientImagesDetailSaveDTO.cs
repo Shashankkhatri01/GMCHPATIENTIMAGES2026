@@ -1,5 +1,3 @@
-using ConfigurationDtos.DTOs;
-using System;
 using System.Collections.Generic;
 
 namespace GMCHPatientImagesDtos.DTOs
@@ -13,11 +11,15 @@ namespace GMCHPatientImagesDtos.DTOs
         public int StatusId { get; set; }
         public int RemarkId { get; set; }
         public string Remark { get; set; }
+        public int DoctorId { get; set; }        
         public List<PatientImageBulkUploadDTO> Images { get; set; } = new();
     }
     public class PatientImageBulkUploadDTO
     {
         public string ImageName { get; set; }
         public string ImageFull { get; set; }
+        //public string FaceVerificationStatus { get; set; }
+        //public decimal? FaceSimilarity { get; set; }
+        //public string FaceVerificationMessage { get; set; }
     }
 }

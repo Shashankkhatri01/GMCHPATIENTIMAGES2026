@@ -38,6 +38,8 @@ namespace ConfigurationDtos.DTOs
         [IgnoreParam]
         public bool IsConsentShow { get; set; }
         [IgnoreParam]
+        public string ConsentDoctor { get; set; }
+        [IgnoreParam]
         public DateTime? CrDate { get; set; }
         public DateTime? FromDate { get; set; }
         public DateTime? ToDate { get; set; }

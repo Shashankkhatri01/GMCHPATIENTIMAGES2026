@@ -28,5 +28,7 @@ namespace GMCHPatientImagesDtos.DTOs
         public string WhatsAppAPIKey { get; set; }
         public string AppURL { get; set; }
         public int OTPExpiryMinutes { get; set; }
+        public bool AllowFaceAuthentication { get; set; }
+        public int FaceSimilarityThreshold { get; set; }
     }
 }
