@@ -21,5 +21,6 @@ namespace ConfigurationDtos.DTOs
         public int CaseTypeId { get; set; }
         public string HISStatus { get; set; }
         public string UniqueID { get; set; }
+        public bool IsReAdmitted { get; set; }
     }
 }
