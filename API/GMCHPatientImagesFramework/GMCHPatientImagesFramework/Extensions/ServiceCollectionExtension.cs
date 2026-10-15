@@ -67,6 +67,12 @@ namespace GMCHPatientImagesFramework.Extensions
             services.AddTransient(typeof(IDoctorFaceImagesDetailService), typeof(DoctorFaceImagesDetailService));
             services.AddTransient(typeof(IDoctorFaceImagesDetailRepository), typeof(DoctorFaceImagesDetailRepository));
 
+            services.AddTransient(typeof(IPatientAdmissionImagesSaveService), typeof(PatientAdmissionImagesSaveService));
+            services.AddTransient(typeof(IPatientAdmissionImagesSaveRepository), typeof(PatientAdmissionImagesSaveRepository));
+
+            services.AddTransient(typeof(IPatientAdmissionImagesDetailService), typeof(PatientAdmissionImagesDetailService));
+            services.AddTransient(typeof(IPatientAdmissionImagesDetailRepository), typeof(PatientAdmissionImagesDetailRepository));
+
             return services;
         }
     }

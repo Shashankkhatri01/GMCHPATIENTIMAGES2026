@@ -10,5 +10,9 @@ namespace GMCHPatientImagesFramework.Services.FaceVerification
             Stream sourceImage,
             Stream targetImage,
             float similarityThreshold = 80);
+
+        Task<FaceOcclusionResult> CheckFaceOcclusionAsync(
+            byte[] imageBytes);
+        Task<ImageQualityResult> CheckImageQualityAsync(byte[] imageBytes);
     }
 }

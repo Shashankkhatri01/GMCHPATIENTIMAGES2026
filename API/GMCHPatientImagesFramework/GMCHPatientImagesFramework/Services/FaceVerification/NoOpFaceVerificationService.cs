@@ -20,5 +20,25 @@ namespace GMCHPatientImagesFramework.Services.FaceVerification
                 Message = "Face authentication is disabled."
             });
         }
+
+        public Task<FaceOcclusionResult> CheckFaceOcclusionAsync(
+            byte[] imageBytes)
+        {
+            return Task.FromResult(new FaceOcclusionResult
+            {
+                IsValid = true,
+                Message = "Face authentication is disabled."
+            });
+        }
+
+        public Task<ImageQualityResult> CheckImageQualityAsync(
+            byte[] imageBytes)
+        {
+            return Task.FromResult(new ImageQualityResult
+            {
+                IsValid = true,
+                Message = "Face authentication is disabled."
+            });
+        }
     }
 }

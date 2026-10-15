@@ -15,6 +15,7 @@ namespace GMCHPatientImagesDtos.DTOs
         public int DoctorId { get; set; }
         public string ImageName { get; set; }
         public string ImageFull { get; set; }
+        public string ImageThumb { get; set; }
         public string ContentType { get; set; }
         public long FileSize { get; set; }
         public DateTime? CrDate { get; set; }

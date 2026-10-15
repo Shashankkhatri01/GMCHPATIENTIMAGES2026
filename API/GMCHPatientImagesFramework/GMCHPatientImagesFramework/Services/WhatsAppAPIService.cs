@@ -56,6 +56,7 @@ namespace GMCHPatientImagesFramework.Services
                 //Save log always
                 var whatsAppLogRequestDTO = new WhatsAppLogRequestDTO
                 {
+                    ID = whatsAppAPIRequestDTO.TransactionId,
                     CampaignName = whatsAppAPIRequestDTO.campaignName,
                     Destination = whatsAppAPIRequestDTO.destination,
                     TemplateParams = string.Join(", ",
@@ -111,6 +112,31 @@ namespace GMCHPatientImagesFramework.Services
                 throw new AppException($"Vaccination {StringConstants.RecordNotFound}");
 
             return new ReturnObject<List<WhatsAppLogRequestDTO>>
+            {
+                ReturnValue = response,
+                Status = true,
+                Success = true
+            };
+        }
+
+        public async Task<ReturnObject<WhatsAppLogRequestDTO>> GetAllParametersAsync(WhatsAppAPIRequestDTO whatsAppAPIRequestDTO)
+        {
+            var whatsAppLogRequestDTO = new WhatsAppLogRequestDTO
+            {
+                ID = whatsAppAPIRequestDTO.TransactionId,
+                CampaignName = whatsAppAPIRequestDTO.campaignName,
+                Mode = "desksms"
+            };
+
+            var response = await _whatsAppAPIRepository.GetByIdAsync(whatsAppLogRequestDTO);
+
+            if (response == null)
+            {
+                throw new AppException(
+                    $"WhatsApp parameters {StringConstants.RecordNotFound}");
+            }
+
+            return new ReturnObject<WhatsAppLogRequestDTO>
             {
                 ReturnValue = response,
                 Status = true,

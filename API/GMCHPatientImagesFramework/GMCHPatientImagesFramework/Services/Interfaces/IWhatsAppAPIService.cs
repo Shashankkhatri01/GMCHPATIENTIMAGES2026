@@ -8,5 +8,6 @@ namespace GMCHPatientImagesFramework.Services.Interfaces
     {
         Task<WhatsAppAPIResponseDTO> SendWhatsAppMessageAsync(WhatsAppAPIRequestDTO whatsAppAPIRequestDTO);
         Task<ReturnObject<List<WhatsAppLogRequestDTO>>> GetAllAsync();
+        Task<ReturnObject<WhatsAppLogRequestDTO>> GetAllParametersAsync(WhatsAppAPIRequestDTO whatsAppAPIRequestDTO);
     }
 }

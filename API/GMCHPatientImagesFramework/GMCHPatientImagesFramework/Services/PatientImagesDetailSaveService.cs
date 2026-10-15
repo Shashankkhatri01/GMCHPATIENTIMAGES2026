@@ -1,4 +1,3 @@
-using ConfigurationDtos.DTOs;
 using GMCHPatientImages.Framework.Utils;
 using GMCHPatientImagesDtos.DTOs;
 using GMCHPatientImagesFramework.Repositories.Interfaces;
@@ -23,13 +22,15 @@ namespace GMCHPatientImagesFramework.Services
         private readonly AppSettings _appSettings;
         private IPatientImagesDetailSaveRepository _repository;
         private IDoctorFaceImagesDetailRepository _doctorfaceRepository;
+        private IPatientAdmissionImagesDetailRepository _patientAdmissionImagesDetailRepository;
         private readonly IFaceVerificationService _faceVerificationService;
 
-        public PatientImagesDetailSaveService(IPatientImagesDetailSaveRepository repository, IDoctorFaceImagesDetailRepository doctorfaceRepository, IFaceVerificationService faceVerificationService, IOptions<AppSettings> appsettings)
+        public PatientImagesDetailSaveService(IPatientImagesDetailSaveRepository repository, IDoctorFaceImagesDetailRepository doctorfaceRepository, IPatientAdmissionImagesDetailRepository patientAdmissionImagesDetailRepository, IFaceVerificationService faceVerificationService, IOptions<AppSettings> appsettings)
         {
             _appSettings = appsettings.Value;
             _repository = repository;
             _doctorfaceRepository = doctorfaceRepository;
+            _patientAdmissionImagesDetailRepository = patientAdmissionImagesDetailRepository;
             _faceVerificationService = faceVerificationService;
         }
 
@@ -42,163 +43,38 @@ namespace GMCHPatientImagesFramework.Services
                     throw new AppException("Please upload at least one image.");
 
                 string locationName = string.Empty;
+                List<ImageValidationResultDTO> validationResults = new();
 
                 //string locationName = await GetLocationName(patientImagesDetailSaveDTO.Latitute, patientImagesDetailSaveDTO.Longitute);
 
                 //face validation
                 if (_appSettings.AllowFaceAuthentication)
+                //&& patientImagesDetailSaveDTO.DoctorId == 1244
                 {
-                    if (patientImagesDetailSaveDTO.DoctorId <= 0)
-                        throw new AppException("Please select a valid doctor.");
+                    validationResults =
+                await ValidateUploadedImagesAsync(
+                    patientImagesDetailSaveDTO);
 
-                    DoctorFaceImagesDetailDTO doctorFaceImagesDetailDTO = new DoctorFaceImagesDetailDTO
-                    {
-                        DoctorId = patientImagesDetailSaveDTO.DoctorId,
-                        Mode = "search"
-                    };
+                    var validationErrors =
+                        validationResults
+                            .Where(x => !x.IsValid)
+                            .SelectMany(x =>
+                                x.Errors.Select(error =>
+                                    $"Image '{x.ImageName}': {error}"))
+                            .ToList();
 
-                    var doctorImages =
-                        await _doctorfaceRepository.GetAllAsync(doctorFaceImagesDetailDTO);
-
-                    if (doctorImages == null || !doctorImages.Any())
+                    if (validationErrors.Any())
                     {
                         return new ReturnObject<long>
                         {
-                            Message = "No doctor face image is registered.",
+                            Message =
+                                "Image validation failed:\n" +
+                                string.Join("\n", validationErrors),
+
                             ReturnValue = -3,
                             Status = true,
                             Success = false
                         };
-                    }
-
-                    //var faceVerificationResults =
-                    //    new List<(string ImageName, string Status, decimal Similarity, string Message)>();
-
-                    foreach (var patientImage in patientImagesDetailSaveDTO.Images)
-                    {
-                        double bestSimilarity = 0;
-                        long bestDoctorFaceId = 0;
-                        string bestDoctorImageName = string.Empty;
-
-                        // ------------------------------------------------
-                        // Compare ONE patient image with ALL doctor images
-                        // ------------------------------------------------
-
-                        foreach (var doctorImage in doctorImages)
-                        {
-                            if (string.IsNullOrWhiteSpace(doctorImage.ImageFull))
-                                continue;
-
-                            // --------------------------------------------
-                            // Doctor physical file
-                            // --------------------------------------------
-
-                            string doctorRelativePath =
-                                doctorImage.ImageFull.TrimStart('/')
-                                                    .Replace('/',
-                                                        Path.DirectorySeparatorChar);
-
-                            string doctorPhysicalPath =
-                                Path.Combine(
-                                    _appSettings.URL,
-                                    doctorRelativePath);
-
-                            if (!File.Exists(doctorPhysicalPath))
-                                continue;
-
-                            // --------------------------------------------
-                            // Doctor image = SOURCE
-                            // --------------------------------------------
-
-                            using var doctorStream =
-                                File.OpenRead(doctorPhysicalPath);
-
-                            // --------------------------------------------
-                            // Patient image = TARGET
-                            // --------------------------------------------
-
-                            string patientBase64 =
-                                patientImage.ImageFull;
-
-                            // If Base64 contains:
-                            // data:image/png;base64,xxxxx
-                            if (patientBase64.Contains(","))
-                            {
-                                patientBase64 =
-                                    patientBase64.Substring(
-                                        patientBase64.IndexOf(",") + 1);
-                            }
-
-                            byte[] patientBytes =
-                                Convert.FromBase64String(patientBase64);
-
-                            using var patientStream =
-                                new MemoryStream(patientBytes);
-
-                            // --------------------------------------------
-                            // AWS comparison
-                            // --------------------------------------------
-
-                            var result =
-                                await _faceVerificationService.CompareFacesAsync(
-                                    doctorStream,
-                                    patientStream,
-                                    0);
-
-                            // --------------------------------------------
-                            // Keep BEST similarity
-                            // --------------------------------------------
-
-                            if (result.Similarity.HasValue &&
-                                result.Similarity.Value > bestSimilarity)
-                            {
-                                bestSimilarity =
-                                    result.Similarity.Value;
-
-                                bestDoctorFaceId =
-                                    doctorImage.DoctorFaceId;
-
-                                bestDoctorImageName =
-                                    doctorImage.ImageName;
-                            }
-                        }
-
-                        // ------------------------------------------------
-                        // Apply YOUR threshold
-                        // ------------------------------------------------
-
-                        double faceThreshold = _appSettings.FaceSimilarityThreshold;
-
-                        if (bestSimilarity < faceThreshold)
-                        {
-                            return new ReturnObject<long>
-                            {
-                                Message =
-                                    $"Doctor face verification failed for image: " +
-                                    $"{patientImage.ImageName}. " +
-                                    $"Best similarity: {bestSimilarity:F2}%.",
-
-                                ReturnValue = -3,
-                                Status = true,
-                                Success = false
-                            };
-                        }
-
-                        //faceVerificationResults.Add(
-                        //                (
-                        //                    patientImage.ImageName,
-                        //                    "VERIFIED",
-                        //                    (decimal)bestSimilarity,
-                        //                    $"Doctor face verified successfully. Similarity: {bestSimilarity:F2}%."
-                        //                ));
-
-                        // Optional logging during POC
-                        Helper.WriteMsg(
-                            $"Face verified. " +
-                            $"Patient Image: {patientImage.ImageName}, " +
-                            $"DoctorFaceId: {bestDoctorFaceId}, " +
-                            $"Reference Image: {bestDoctorImageName}, " +
-                            $"Similarity: {bestSimilarity:F2}%");
                     }
                 }                    
                 //end face validation
@@ -209,9 +85,9 @@ namespace GMCHPatientImagesFramework.Services
                 dt.Columns.Add("ImageName", typeof(string));
                 dt.Columns.Add("ImageFull", typeof(string));
 
-                //dt.Columns.Add("FaceVerificationStatus", typeof(string));
-                //dt.Columns.Add("FaceSimilarity", typeof(decimal));
-                //dt.Columns.Add("FaceVerificationMessage", typeof(string));
+                dt.Columns.Add("FaceVerificationStatus", typeof(string));
+                dt.Columns.Add("FaceSimilarity", typeof(decimal));
+                dt.Columns.Add("FaceVerificationMessage", typeof(string));
 
                 string subpath = "/patientimages";
                 string uploadPath = Path.Combine(_appSettings.URL, subpath.TrimStart('/'));
@@ -232,20 +108,46 @@ namespace GMCHPatientImagesFramework.Services
 
                     File.WriteAllBytes(path, contents);
 
-                    //var faceResult =
-                    //    faceVerificationResults
-                    //        .First(x => x.ImageName == image.ImageName);
+                    var faceResult = validationResults.FirstOrDefault(
+                                    x => x.ImageName == image.ImageName);
 
-                                        dt.Rows.Add(
-                                            image.ImageName,
-                                            subpath + "/" + fileName//,
-                                            //faceResult.Status,
-                                            //faceResult.Similarity,
-                                            //faceResult.Message
-                                        );
-                                    }
+                    string verificationStatus = null;
+                    decimal? similarity = null;
+                    string verificationMessage = null;
 
-                patientImagesDetailSaveDTO.LocationName = locationName;
+                    if (_appSettings.AllowFaceAuthentication && faceResult != null)
+                    {
+                        verificationStatus = "VERIFIED";
+
+                        // Store the lower score of doctor and patient verification.
+                        if (faceResult.DoctorSimilarity.HasValue &&
+                            faceResult.PatientSimilarity.HasValue)
+                        {
+                            similarity = Math.Min(
+                                faceResult.DoctorSimilarity.Value,
+                                faceResult.PatientSimilarity.Value);
+                        }
+
+                        verificationMessage =
+                            "Doctor and patient face verification passed.";
+                    }
+
+                    dt.Rows.Add(
+                        image.ImageName,
+                        subpath + "/" + fileName,
+                        verificationStatus == null
+                            ? (object)DBNull.Value
+                            : verificationStatus,
+                        similarity.HasValue
+                            ? (object)similarity.Value
+                            : DBNull.Value,
+                        verificationMessage == null
+                            ? (object)DBNull.Value
+                            : verificationMessage
+                    );
+                }
+
+                    patientImagesDetailSaveDTO.LocationName = locationName;
                 // Only ONE database call
                 long response = await _repository.InsertBulkAsync(patientImagesDetailSaveDTO, dt,"@Images","dbo.PatientImagesDetailTVP");
 
@@ -303,5 +205,331 @@ namespace GMCHPatientImagesFramework.Services
                 }
             }
         }
+
+        private async Task<List<ImageValidationResultDTO>>ValidateUploadedImagesAsync(PatientImagesDetailSaveDTO dto)
+        {
+            var results =
+                new List<ImageValidationResultDTO>();
+
+            // ---------------------------------------------------------
+            // Validate required IDs
+            // ---------------------------------------------------------
+
+            if (dto.DoctorId <= 0)
+                throw new AppException(
+                    "Please select a valid doctor.");
+
+            if (dto.PatientImagesId <= 0)
+                throw new AppException(
+                    "PatientImagesId is required for face verification.");
+
+
+            // ---------------------------------------------------------
+            // Get doctor reference images
+            // ---------------------------------------------------------
+
+            var doctorRequest =
+                new DoctorFaceImagesDetailDTO
+                {
+                    DoctorId = dto.DoctorId,
+                    Mode = "search"
+                };
+
+            var doctorImages =
+                await _doctorfaceRepository.GetAllAsync(doctorRequest);
+
+            if (doctorImages == null ||
+                !doctorImages.Any())
+            {
+                throw new AppException(
+                    "No doctor face image is registered.");
+            }
+
+            // 2. Get patient admission reference images once
+            // Replace this request/response DTO with the actual types
+            // used by your patient admission images repository.
+            //var patientRequest = new PatientAdmissionImagesDetailDTO
+            //{
+            //    PatientImagesId = dto.PatientImagesId,
+            //    Mode = "search"
+            //};
+
+            var patientAdmissionImages = new List<PatientAdmissionImagesDetailResponseDTO>(); // Placeholder for actual patient admission images
+            //var patientAdmissionImages =
+            //    await _patientAdmissionImagesDetailRepository
+            //        .GetAllAsync(patientRequest);
+
+            //if (patientAdmissionImages == null ||
+            //    !patientAdmissionImages.Any())
+            //{
+            //    throw new AppException(
+            //        "No patient admission reference images are available.");
+            //}
+
+            // ---------------------------------------------------------
+            // 3. Validate every uploaded image
+            // ---------------------------------------------------------
+            foreach (var uploadedImage in dto.Images)
+            {
+                var result = await ValidateSingleImageAsync(
+                    uploadedImage,
+                    doctorImages,
+                    patientAdmissionImages);
+
+                results.Add(result);
+            }
+            return results;
+        }
+
+        private async Task<ImageValidationResultDTO>
+    ValidateSingleImageAsync(
+        PatientImageBulkUploadDTO uploadedImage,
+        List<DoctorFaceImagesDetailResponseDTO> doctorImages,
+        List<PatientAdmissionImagesDetailResponseDTO> patientImages)
+        {
+            var result = new ImageValidationResultDTO
+            {
+                ImageName = uploadedImage.ImageName,
+                IsValid = true
+            };
+
+            if (string.IsNullOrWhiteSpace(uploadedImage.ImageFull))
+            {
+                result.IsValid = false;
+                result.Errors.Add("Uploaded image is empty.");
+                return result;
+            }
+
+            byte[] uploadedBytes;
+
+            try
+            {
+                uploadedBytes = Convert.FromBase64String(uploadedImage.ImageFull);
+            }
+            catch (FormatException)
+            {
+                result.IsValid = false;
+                result.Errors.Add("Uploaded image has invalid Base64 data.");
+                return result;
+            }
+
+            // 1. Image quality check: blur, insufficient sharpness, etc.
+            //var qualityResult =
+            //    await _faceVerificationService.CheckImageQualityAsync(
+            //        uploadedBytes);
+
+            //if (!qualityResult.IsValid)
+            //{
+            //    result.IsValid = false;
+            //    result.Errors.Add(qualityResult.Message);
+            //    return result;
+            //}
+
+            // 2. Face occlusion check: hand, mask, or other obstruction.
+            var occlusionResult =
+                await _faceVerificationService.CheckFaceOcclusionAsync(
+                    uploadedBytes);
+
+            if (!occlusionResult.IsValid)
+            {
+                result.IsValid = false;
+                result.Errors.Add(occlusionResult.Message);
+                return result;
+            }
+
+            // 3. Doctor face verification
+            var doctorResult = await VerifyDoctorFaceAsync(
+                uploadedBytes,
+                doctorImages);
+
+            result.DoctorVerified = doctorResult.IsVerified;
+            result.DoctorSimilarity = doctorResult.Similarity;
+
+            if (!doctorResult.IsVerified)
+            {
+                result.IsValid = false;
+                result.Errors.Add(
+                    $"Doctor face not matched. Similarity: " +
+                    $"{doctorResult.Similarity:F2}%.");
+            }
+
+            // 4. Patient face verification
+            //var patientResult = await VerifyPatientFaceAsync(
+            //    uploadedBytes,
+            //    patientImages);
+
+            //result.PatientVerified = patientResult.IsVerified;
+            //result.PatientSimilarity = patientResult.Similarity;
+
+            //if (!patientResult.IsVerified)
+            //{
+            //    result.IsValid = false;
+            //    result.Errors.Add(
+            //        $"Patient face not matched. Similarity: " +
+            //        $"{patientResult.Similarity:F2}%.");
+            //}
+
+            return result;
+        }
+
+        private async Task<FaceMatchResultDTO> VerifyDoctorFaceAsync(byte[] patientBytes, List<DoctorFaceImagesDetailResponseDTO> doctorImages)
+        {
+            double bestSimilarity = 0;
+            long bestDoctorFaceId = 0;
+
+            string bestDoctorImageName =
+                string.Empty;
+
+            foreach (var doctorImage in doctorImages)
+            {
+                if (string.IsNullOrWhiteSpace(
+                    doctorImage.ImageThumb))
+                {
+                    continue;
+                }
+
+                string doctorRelativePath =
+                    doctorImage.ImageThumb
+                        .TrimStart('/')
+                        .Replace(
+                            '/',
+                            Path.DirectorySeparatorChar);
+
+                string doctorPhysicalPath =
+                    Path.Combine(
+                        _appSettings.URL,
+                        doctorRelativePath);
+
+    //            Helper.WriteMsg(
+    //$"FaceDebug | Type=DoctorReference | " +
+    //$"ReferenceId={doctorImage.DoctorFaceId} | " +
+    //$"FileExists={File.Exists(doctorPhysicalPath)}");
+
+                if (!File.Exists(doctorPhysicalPath))
+                    continue;
+
+                using var doctorStream =
+                    File.OpenRead(doctorPhysicalPath);
+
+                using var patientStream =
+                    new MemoryStream(patientBytes);
+
+                var response =
+                    await _faceVerificationService
+                        .CompareFacesAsync(
+                            doctorStream,
+                            patientStream,
+                            0);
+
+    //            Helper.WriteMsg(
+    //$"RekognitionDebug | " + response);
+
+                if (response.Similarity.HasValue &&
+                    response.Similarity.Value >
+                    bestSimilarity)
+                {
+                    bestSimilarity =
+                        response.Similarity.Value;
+
+                    bestDoctorFaceId =
+                        doctorImage.DoctorFaceId;
+
+                    bestDoctorImageName =
+                        doctorImage.ImageName;
+                }
+            }
+
+
+            double threshold =
+                _appSettings.FaceSimilarityThreshold;
+
+            return new FaceMatchResultDTO
+            {
+                IsVerified =
+                    bestSimilarity >= threshold,
+
+                Similarity =
+                    (decimal)bestSimilarity,
+
+                ReferenceId =
+                    bestDoctorFaceId,
+
+                ReferenceImageName =
+                    bestDoctorImageName
+            };
+        }
+
+    //    private async Task<FaceMatchResultDTO>
+    //VerifyPatientFaceAsync(
+    //    byte[] uploadedBytes,
+    //    List<PatientAdmissionImagesDetailResponseDTO> patientImages)
+    //    {
+    //        double bestSimilarity = 0;
+    //        long bestReferenceId = 0;
+    //        string bestReferenceImageName = string.Empty;
+
+    //        foreach (var referenceImage in patientImages)
+    //        {
+    //            if (string.IsNullOrWhiteSpace(referenceImage.ImageThumb))
+    //                continue;
+
+
+    //            string patientRelativePath =
+    //                referenceImage.ImageThumb
+    //                    .TrimStart('/')
+    //                    .Replace(
+    //                        '/',
+    //                        Path.DirectorySeparatorChar);
+
+    //            string referencePhysicalPath =
+    //                Path.Combine(
+    //                    _appSettings.URL,
+    //                    patientRelativePath);
+
+    ////            Helper.WriteMsg(
+    ////$"FaceDebug | Type=PatientReference | " +
+    ////$"ReferenceId={referenceImage.PatientAdmissionImageId} | " +
+    ////$"FileExists={File.Exists(referencePhysicalPath)}");
+
+    //            if (!File.Exists(referencePhysicalPath))
+    //                continue;
+
+    //            using var referenceStream =
+    //                File.OpenRead(referencePhysicalPath);
+
+    //            using var uploadedStream =
+    //                new MemoryStream(uploadedBytes);
+
+    //            var response =
+    //                await _faceVerificationService.CompareFacesAsync(
+    //                    referenceStream,
+    //                    uploadedStream,
+    //                    0);
+
+    ////            Helper.WriteMsg(
+    ////$"RekognitionDebug | " + response);
+
+    //            if (response.Similarity.HasValue &&
+    //                response.Similarity.Value > bestSimilarity)
+    //            {
+    //                bestSimilarity = response.Similarity.Value;
+
+    //                // Replace with your actual patient image detail ID
+    //                bestReferenceId = referenceImage.PatientAdmissionImageId;
+
+    //                bestReferenceImageName = referenceImage.ImageName;
+    //            }
+    //        }
+
+    //        double threshold = _appSettings.FaceSimilarityThreshold;
+
+    //        return new FaceMatchResultDTO
+    //        {
+    //            IsVerified = bestSimilarity >= threshold,
+    //            Similarity = (decimal)bestSimilarity,
+    //            ReferenceId = bestReferenceId,
+    //            ReferenceImageName = bestReferenceImageName
+    //        };
+    //    }
     }
 }

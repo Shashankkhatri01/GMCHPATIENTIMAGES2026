@@ -55,5 +55,6 @@ namespace ConfigurationDtos.DTOs
         public int PhotoPendingHours { get; set; }
         [IgnoreParam]
         public string StatusDetails { get; set; }
+        public bool IsReAdmitted { get; set; }
     }
 }

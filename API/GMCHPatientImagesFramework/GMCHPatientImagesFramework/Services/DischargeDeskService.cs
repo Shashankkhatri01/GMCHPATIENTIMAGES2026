@@ -63,34 +63,76 @@ namespace GMCHPatientImagesFramework.Services
             try
             {
                 if (dischargeDeskRequestDTO.PatientImagesId <= 0)
-                    throw new AppException("Update ID not passed");
+                    throw new AppException("Patient ID not passed");
 
                 var response = await _repository.UpdateAsync(dischargeDeskRequestDTO);
 
-                //send whatsapp message
-                if (_appSettings.AllowWhatsApp && dischargeDeskRequestDTO.SendNotification)
+                if (string.Equals(
+                        dischargeDeskRequestDTO.FinalStatus?.Trim(),
+                        "information",
+                        StringComparison.OrdinalIgnoreCase) &&
+                    (!_appSettings.AllowWhatsApp ||
+                     !dischargeDeskRequestDTO.SendNotification ||
+                     string.IsNullOrWhiteSpace(dischargeDeskRequestDTO.RemarkId)))
                 {
+                    return new ReturnObject<long>
+                    {
+                        Message = $"For Information status, WhatsApp must be enabled, notification must be selected, and a campaign must be provided.",
+                        ReturnValue = -1,
+                        Status = true,
+                        Success = false
+                    };
+                }
+
+                //send whatsapp message
+                if (_appSettings.AllowWhatsApp && dischargeDeskRequestDTO.SendNotification && !string.IsNullOrWhiteSpace(dischargeDeskRequestDTO.RemarkId) && string.Equals(
+                        dischargeDeskRequestDTO.FinalStatus?.Trim(),
+                        "information",
+                        StringComparison.OrdinalIgnoreCase))
+                {
+                    string campaignName = dischargeDeskRequestDTO.RemarkId.Trim();
+
+                    // Call your API using PatientImagesId + CampaignCode.
+
+                    WhatsAppAPIRequestDTO whatsAppGetParametersDTO = new WhatsAppAPIRequestDTO
+                    {
+                        TransactionId = dischargeDeskRequestDTO.PatientImagesId,
+                        campaignName = campaignName
+                    };
+
+                    var campaignData =
+                        await _whatsAppService.GetAllParametersAsync(whatsAppGetParametersDTO);
+
+                    if (campaignData == null || !campaignData.Success)
+                    {
+                        throw new AppException(
+                            "Unable to retrieve WhatsApp campaign data.");
+                    }
+
+                    var campaignDetails = campaignData.ReturnValue;
+
+                    // Parse campaign-specific template parameters.
+                    var templateParams = (campaignDetails.TemplateParams ?? string.Empty)
+                        .Split('|')
+                        .ToList();
+
+                    if (templateParams.Any(string.IsNullOrWhiteSpace))
+                    {
+                        throw new AppException(
+                            "One or more WhatsApp template parameters are missing.");
+                    }
+
                     var whatsAppAPIRequestDTO = new WhatsAppAPIRequestDTO
                     {
-                        destination = dischargeDeskRequestDTO.MobileNo,
+                        destination = campaignDetails.Destination,
                         userName = WhatsAppAPIConstantsDTO.UserName,
-                        templateParams = new List<string> { dischargeDeskRequestDTO.MobileNo, _appSettings.AppURL },
+                        templateParams = templateParams,
                         source = WhatsAppAPIConstantsDTO.Source,
-                        paramsFallbackValue = new Dictionary<string, string> { { "FirstName", "user" } }
+                        paramsFallbackValue = new Dictionary<string, string> { { "FirstName", "user" } },
+                        campaignName = campaignName,
+                        TransactionId = dischargeDeskRequestDTO.PatientImagesId                        
                     };
-
-                    var campaigns = new[]
-                    {
-                        WhatsAppAPIConstantsDTO.CampaignNameManualRegistration,
-                        WhatsAppAPIConstantsDTO.CampaignNameGMCHRegistrationHindi
-                    };
-
-                    foreach (var campaign in campaigns)
-                    {
-                        whatsAppAPIRequestDTO.campaignName = campaign;
-                        whatsAppAPIRequestDTO.TransactionId = dischargeDeskRequestDTO.PatientImagesId;
-                        await _whatsAppService.SendWhatsAppMessageAsync(whatsAppAPIRequestDTO);
-                    }
+                    await _whatsAppService.SendWhatsAppMessageAsync(whatsAppAPIRequestDTO);
                 }
 
                 //end whatsapp message

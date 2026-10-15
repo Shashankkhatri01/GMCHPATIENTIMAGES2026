@@ -50,6 +50,9 @@ namespace GMCHPatientImagesFramework.Services
                 if (!patientImagesDTO.AdmissionDate.HasValue)
                     throw new AppException("Please select Admission Date!");
 
+                if (patientImagesDTO.PatientTypeId <= 0)
+                    throw new AppException("Please select Patient Type!");
+
                 if (string.IsNullOrWhiteSpace(patientImagesDTO.PatientName))
                     throw new AppException("Please enter Patient Name!");
 
@@ -62,14 +65,14 @@ namespace GMCHPatientImagesFramework.Services
                 if (string.IsNullOrWhiteSpace(patientImagesDTO.MobileNo))
                     throw new AppException("Please enter Mobile No!");
 
-                if (string.IsNullOrWhiteSpace(patientImagesDTO.PayerName))
-                    throw new AppException("Please enter Payer Name!");
+                //if (patientImagesDTO.PayerId <= 0)
+                //    throw new AppException("Please select Payer Name!");
 
-                if (string.IsNullOrWhiteSpace(patientImagesDTO.DoctorName))
-                    throw new AppException("Please enter Doctor Name!");
+                //if (patientImagesDTO.DoctorId <= 0)
+                //    throw new AppException("Please select Doctor Name!");
 
-                if (patientImagesDTO.DepartmentId <= 0)
-                    throw new AppException("Please select Department Name!");
+                //if (patientImagesDTO.DepartmentId <= 0)
+                //    throw new AppException("Please select Department Name!");
 
                 var response = await _repository.InsertAsync(patientImagesDTO);
 
@@ -117,6 +120,9 @@ namespace GMCHPatientImagesFramework.Services
                     if (!patientImagesDTO.AdmissionDate.HasValue)
                         throw new AppException("Please select Admission Date!");
 
+                    if (patientImagesDTO.PatientTypeId <= 0)
+                        throw new AppException("Please select Patient Type!");
+
                     if (string.IsNullOrWhiteSpace(patientImagesDTO.PatientName))
                         throw new AppException("Please enter Patient Name!");
 
@@ -129,14 +135,14 @@ namespace GMCHPatientImagesFramework.Services
                     if (string.IsNullOrWhiteSpace(patientImagesDTO.MobileNo))
                         throw new AppException("Please enter Mobile No!");
 
-                    if (string.IsNullOrWhiteSpace(patientImagesDTO.PayerName))
-                        throw new AppException("Please enter Payer Name!");
+                    //if (patientImagesDTO.PayerId <= 0)
+                    //    throw new AppException("Please select Payer Name!");
 
-                    if (string.IsNullOrWhiteSpace(patientImagesDTO.DoctorName))
-                        throw new AppException("Please enter Doctor Name!");
+                    //if (patientImagesDTO.DoctorId <= 0)
+                    //    throw new AppException("Please select Doctor Name!");
 
-                    if (patientImagesDTO.DepartmentId <= 0)
-                        throw new AppException("Please select Department Name!");
+                    //if (patientImagesDTO.DepartmentId <= 0)
+                    //    throw new AppException("Please select Department Name!");
                 }
 
                 var response = await _repository.UpdateAsync(patientImagesDTO);
